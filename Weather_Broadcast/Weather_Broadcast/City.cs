@@ -20,7 +20,11 @@ namespace Weather_Broadcast
 
         public int GetCityIDFromCityName(string cityName)
         {
-            return 111;
+            if (Constant.MapOfCityNameAndID.TryGetValue(cityName, out int cityID))
+            {
+                return cityID;
+            }
+            return -1;
         }
     }
 }
