@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="API.cs" />
     <Compile Include="City.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherBoard.cs">
