@@ -9,18 +9,18 @@ namespace Weather_Broadcast
 {
    public class City
     {
-        public string _name { get; set; }
-        public int _id { get; set; }
+        public string Name { get; private set; }
+        public int ID { get; private set; }
 
 
         public City(string name)
         {
-            _name = name;
+            Name = name;
         }
 
-        public int GetCityFromCityName()
+        public int GetCityIDFromCityName(string cityName)
         {
-          throw new NotImplementedException();
+            return 111;
         }
     }
 }

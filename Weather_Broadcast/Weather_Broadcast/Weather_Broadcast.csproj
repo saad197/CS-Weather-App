@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Weather.cs" />
     <Compile Include="WeatherBoard.cs">
       <SubType>Form</SubType>
     </Compile>
