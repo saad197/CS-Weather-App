@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 namespace Weather_Broadcast
 {
     class Helper
-    {
-        public string DegreeConversion { get; private set; }
-
-        public string ConvertFahrenheitToCelsius(double temp)
+    {      
+        public static string ConvertFahrenheitToCelsius(double fahrenheitTemp)
         {
-            return DegreeConversion = ((5 / 9) * (temp - 32)).ToString();
+            return ((5 / 9) * (fahrenheitTemp - 32)).ToString();
         }
 
-        public string ConvertCelsiusToFahrenheit(double temp)
+        public static string ConvertCelsiusToFahrenheit(double celcisustTemp)
         {
-            return DegreeConversion = ((temp * 1.8) + 32).ToString();
+            return ((celcisustTemp * 1.8) + 32).ToString();
         }
     }
 }
