@@ -82,10 +82,6 @@
             this.cbCityList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbCityList.FormattingEnabled = true;
             this.cbCityList.ItemHeight = 25;
-            this.cbCityList.Items.AddRange(new object[] {
-            "Calgary",
-            "Vancouver",
-            "Toronto"});
             this.cbCityList.Location = new System.Drawing.Point(498, 573);
             this.cbCityList.Name = "cbCityList";
             this.cbCityList.Size = new System.Drawing.Size(200, 33);

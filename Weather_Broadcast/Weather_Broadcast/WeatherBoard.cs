@@ -15,7 +15,25 @@ namespace Weather_Broadcast
         public WeatherBoard()
         {
             InitializeComponent();
+            FillCityNamesToCityComboBox();
         }
 
+        private List<string> GetListCityNames()
+        {
+            List<string> cityNames = new List<string>();
+
+            foreach (var pair in Constant.MapOfCityNameAndID)
+            {
+                cityNames.Add(pair.Key);
+            }
+
+            return cityNames;
+        }
+
+        private void FillCityNamesToCityComboBox()
+        {
+            List<string> cityNames = GetListCityNames();
+            cbCityList.DataSource = cityNames;
+        }
     }
 }
