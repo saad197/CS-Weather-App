@@ -50,6 +50,12 @@
     <Compile Include="City.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherBoard.cs">
       <SubType>Form</SubType>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WeatherBoard.resx">
       <DependentUpon>WeatherBoard.cs</DependentUpon>
     </EmbeddedResource>
