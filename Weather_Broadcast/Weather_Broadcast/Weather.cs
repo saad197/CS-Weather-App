@@ -2,6 +2,15 @@
 
 public class Weather
 {
+    private double Temp { get; set; }
+    private string condition { get; set; }
+    private double humidity { get; set; }
+    private double rainChance { get; set; }
+    private DateTime sunrise { get; set; }
+    private DateTime sunset { get; set; }
+    private double windspeed { get; set; }
+    private double precipitation { get; set; }
+    private string icon { get; set; }
 	public Weather()
 	{
 
