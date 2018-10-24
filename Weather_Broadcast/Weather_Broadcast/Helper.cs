@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Weather_Broadcast
 {
-    class Helper
+    public static class Helper
     {      
         public static string ConvertFahrenheitToCelsius(double fahrenheitTemp)
         {

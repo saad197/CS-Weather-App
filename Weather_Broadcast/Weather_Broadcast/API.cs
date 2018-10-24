@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Weather_Broadcast
 {
-    class API
+    public class API
     {
         City selectedCity;
+
+        public API()
+        {
+
+        }
 
         public API( City city)
         {
