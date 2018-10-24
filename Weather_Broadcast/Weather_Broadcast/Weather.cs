@@ -4,7 +4,7 @@ namespace Weather_Broadcast
 {
     public class Weather
     {
-        private double Temp { get; set; }
+        private double temp { get; set; }
         private string condition { get; set; }
         private double humidity { get; set; }
         private double rainChance { get; set; }
@@ -19,7 +19,14 @@ namespace Weather_Broadcast
         public Weather()
         {
             apiWeather = new API();
-            
+            temp = apiWeather.GetTemp();
+            condition = apiWeather.GetWeatherCondition();
+            humidity = apiWeather.GetHumidity();
+            rainChance = apiWeather.GetRainChance();
+            sunrise = apiWeather.GetSunRiseDayTime();
+            sunset = apiWeather.GetSunSetDayTime();
+            windspeed = apiWeather.GetWindSpeed();
+
         }
 
         public static void DisplayWeather()

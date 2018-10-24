@@ -20,39 +20,44 @@ namespace Weather_Broadcast
             selectedCity = city;
         }
 
-        public static void GetTemp()
+        public double GetTemp()
+        {
+            return 0.0;
+        }
+
+        public double GetHumidity()
+        {
+            return 0.0;
+        }
+
+        public double GetRainChance()
+        {
+            return 0.0;
+        }
+
+        public string GetWeatherCondition()
+        {
+            return "cold";
+        }
+
+        public double GetWindSpeed()
+        {
+            return 0.0;
+        }
+
+        public void GetDailyWeather()
         {
 
         }
 
-        public static void GetHumidity()
+        public DateTime GetSunRiseDayTime()
         {
-
+            return new DateTime();
         }
 
-        public static void GetRainChance()
+        public DateTime GetSunSetDayTime()
         {
-
-        }
-
-        public static void GetWeatherCondition()
-        {
-
-        }
-
-        public static void GetWindSpeed()
-        {
-
-        }
-
-        public static void GetDailyWeather()
-        {
-
-        }
-
-        public static void GetCurrentDayTime()
-        {
-
+            return new DateTime();
         }
     }
 }
