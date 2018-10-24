@@ -54,7 +54,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Date = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainCurrentIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +62,7 @@
             // mainCurrentIcon
             // 
             this.mainCurrentIcon.Location = new System.Drawing.Point(738, 192);
-            this.mainCurrentIcon.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mainCurrentIcon.Margin = new System.Windows.Forms.Padding(6);
             this.mainCurrentIcon.Name = "mainCurrentIcon";
             this.mainCurrentIcon.Size = new System.Drawing.Size(302, 256);
             this.mainCurrentIcon.TabIndex = 0;
@@ -122,7 +121,7 @@
             this.panel1.Controls.Add(this.DailyTemp);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(24, 798);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1900, 581);
             this.panel1.TabIndex = 5;
@@ -164,7 +163,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(130, 125);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(302, 256);
             this.pictureBox1.TabIndex = 4;
@@ -175,7 +174,7 @@
             this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh.Location = new System.Drawing.Point(1732, 23);
-            this.Refresh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(6);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(192, 113);
             this.Refresh.TabIndex = 6;
@@ -332,7 +331,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Calgary"});
             this.comboBox1.Location = new System.Drawing.Point(1556, 248);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(364, 33);
             this.comboBox1.TabIndex = 20;
@@ -349,22 +348,11 @@
             this.Date.Text = "Date";
             this.Date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(117, 258);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 80);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "display cityname";
-            this.button1.UseVisualStyleBackColor = true;
-           
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1948, 1789);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Wind);
@@ -387,7 +375,7 @@
             this.Controls.Add(this.mainCurrentDescription);
             this.Controls.Add(this.mainCurrentTemp);
             this.Controls.Add(this.mainCurrentIcon);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main";
             this.Text = "Weather";
             ((System.ComponentModel.ISupportInitialize)(this.mainCurrentIcon)).EndInit();
@@ -427,6 +415,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label Date;
-        private System.Windows.Forms.Button button1;
     }
 }

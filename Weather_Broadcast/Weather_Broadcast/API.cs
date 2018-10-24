@@ -8,6 +8,13 @@ namespace Weather_Broadcast
 {
     class API
     {
+        City selectedCity;
+
+        public API( City city)
+        {
+            selectedCity = city;
+        }
+
         public static void GetTemp()
         {
 
