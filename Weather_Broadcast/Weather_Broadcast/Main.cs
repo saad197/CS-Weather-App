@@ -17,6 +17,6 @@ namespace Weather_Broadcast
         public Main()
         {
             weather = new Weather();
-        }      
+        }
     }
 }
