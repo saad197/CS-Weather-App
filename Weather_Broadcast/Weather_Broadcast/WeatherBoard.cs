@@ -12,27 +12,35 @@ namespace Weather_Broadcast
 {
     public partial class WeatherBoard : Form
     {
+        List<City> cityList;
+        
         public WeatherBoard()
         {
             InitializeComponent();
-            FillCityNamesToCityComboBox();
+            FillListCityData();
+            FillCityNamesToCityComboBox();          
         }
 
-        private List<string> GetListCityNames()
+        private void FillListCityData()
         {
-            List<string> cityNames = new List<string>();
+            cityList = new List<City>();
 
             foreach (var pair in Constant.MapOfCityNameAndID)
             {
-                cityNames.Add(pair.Key);
+                City city = new City(pair.Key);
+                cityList.Add(city);
             }
-
-            return cityNames;
         }
 
         private void FillCityNamesToCityComboBox()
         {
-            List<string> cityNames = GetListCityNames();
+            List<string> cityNames = new List<string>();
+
+            foreach (var city in cityList)
+            {
+                cityNames.Add(city.Name);
+            }
+
             cbCityList.DataSource = cityNames;
         }
     }

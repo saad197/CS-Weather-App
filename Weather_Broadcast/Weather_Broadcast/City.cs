@@ -9,18 +9,16 @@ namespace Weather_Broadcast
 {
    public class City
     {
-        public string Name { get; private set; }
-        public int ID { get; private set; }
-
+        public string Name { get; private set; }     
 
         public City(string name)
         {
             Name = name;
         }
 
-        public int GetCityIDFromCityName(string cityName)
+        public int GetCityIDFromCityName()
         {
-            if (Constant.MapOfCityNameAndID.TryGetValue(cityName, out int cityID))
+            if (Constant.MapOfCityNameAndID.TryGetValue(Name, out int cityID))
             {
                 return cityID;
             }

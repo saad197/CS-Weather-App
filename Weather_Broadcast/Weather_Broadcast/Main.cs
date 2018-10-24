@@ -12,10 +12,15 @@ namespace Weather_Broadcast
 {
     public partial class Main : Form
     {
-        public Main()
+        City currentSelectedCity;
+
+        public Main( string cityName)
         {
             InitializeComponent();
+
+            currentSelectedCity = new City(cityName);
         }
+      
 
         private void Main_Load(object sender, EventArgs e)
         {
