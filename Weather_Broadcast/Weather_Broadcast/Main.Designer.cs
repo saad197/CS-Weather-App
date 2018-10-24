@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainCurrentIcon = new System.Windows.Forms.PictureBox();
-            this.mainCurrentTemp = new System.Windows.Forms.Label();
-            this.mainCurrentDescription = new System.Windows.Forms.Label();
-            this.mainCity = new System.Windows.Forms.Label();
-            this.DailyLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.DailyDate = new System.Windows.Forms.Label();
+            this.pbMainCurrentIcon = new System.Windows.Forms.PictureBox();
+            this.labelMainCurrentTemp = new System.Windows.Forms.Label();
+            this.labelMainCurrentDescription = new System.Windows.Forms.Label();
+            this.labelMainCity = new System.Windows.Forms.Label();
+            this.labelDaily = new System.Windows.Forms.Label();
+            this.panelDailyInfo = new System.Windows.Forms.Panel();
+            this.labelDailyDate = new System.Windows.Forms.Label();
             this.DailyDesription = new System.Windows.Forms.Label();
-            this.DailyTemp = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelDailyTemp = new System.Windows.Forms.Label();
+            this.pbDailyIcon = new System.Windows.Forms.PictureBox();
             this.Refresh = new System.Windows.Forms.Button();
             this.DayDetail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,90 +53,90 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Date = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.mainCurrentIcon)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.labelDate = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
+            this.panelDailyInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDailyIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // mainCurrentIcon
+            // pbMainCurrentIcon
             // 
-            this.mainCurrentIcon.Location = new System.Drawing.Point(738, 192);
-            this.mainCurrentIcon.Margin = new System.Windows.Forms.Padding(6);
-            this.mainCurrentIcon.Name = "mainCurrentIcon";
-            this.mainCurrentIcon.Size = new System.Drawing.Size(302, 256);
-            this.mainCurrentIcon.TabIndex = 0;
-            this.mainCurrentIcon.TabStop = false;
+            this.pbMainCurrentIcon.Location = new System.Drawing.Point(738, 192);
+            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(6);
+            this.pbMainCurrentIcon.Name = "pbMainCurrentIcon";
+            this.pbMainCurrentIcon.Size = new System.Drawing.Size(302, 256);
+            this.pbMainCurrentIcon.TabIndex = 0;
+            this.pbMainCurrentIcon.TabStop = false;
             // 
-            // mainCurrentTemp
+            // labelMainCurrentTemp
             // 
-            this.mainCurrentTemp.AutoSize = true;
-            this.mainCurrentTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainCurrentTemp.Location = new System.Drawing.Point(1052, 248);
-            this.mainCurrentTemp.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.mainCurrentTemp.Name = "mainCurrentTemp";
-            this.mainCurrentTemp.Size = new System.Drawing.Size(176, 67);
-            this.mainCurrentTemp.TabIndex = 1;
-            this.mainCurrentTemp.Text = "Temp";
+            this.labelMainCurrentTemp.AutoSize = true;
+            this.labelMainCurrentTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainCurrentTemp.Location = new System.Drawing.Point(1052, 248);
+            this.labelMainCurrentTemp.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelMainCurrentTemp.Name = "labelMainCurrentTemp";
+            this.labelMainCurrentTemp.Size = new System.Drawing.Size(176, 67);
+            this.labelMainCurrentTemp.TabIndex = 1;
+            this.labelMainCurrentTemp.Text = "Temp";
             // 
-            // mainCurrentDescription
+            // labelMainCurrentDescription
             // 
-            this.mainCurrentDescription.AutoSize = true;
-            this.mainCurrentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainCurrentDescription.Location = new System.Drawing.Point(1052, 342);
-            this.mainCurrentDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.mainCurrentDescription.Name = "mainCurrentDescription";
-            this.mainCurrentDescription.Size = new System.Drawing.Size(318, 67);
-            this.mainCurrentDescription.TabIndex = 2;
-            this.mainCurrentDescription.Text = "Description";
+            this.labelMainCurrentDescription.AutoSize = true;
+            this.labelMainCurrentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainCurrentDescription.Location = new System.Drawing.Point(1052, 342);
+            this.labelMainCurrentDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelMainCurrentDescription.Name = "labelMainCurrentDescription";
+            this.labelMainCurrentDescription.Size = new System.Drawing.Size(318, 67);
+            this.labelMainCurrentDescription.TabIndex = 2;
+            this.labelMainCurrentDescription.Text = "Description";
             // 
-            // mainCity
+            // labelMainCity
             // 
-            this.mainCity.AutoSize = true;
-            this.mainCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainCity.Location = new System.Drawing.Point(846, 73);
-            this.mainCity.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.mainCity.Name = "mainCity";
-            this.mainCity.Size = new System.Drawing.Size(129, 67);
-            this.mainCity.TabIndex = 3;
-            this.mainCity.Text = "City";
-            this.mainCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelMainCity.AutoSize = true;
+            this.labelMainCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainCity.Location = new System.Drawing.Point(846, 73);
+            this.labelMainCity.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelMainCity.Name = "labelMainCity";
+            this.labelMainCity.Size = new System.Drawing.Size(129, 67);
+            this.labelMainCity.TabIndex = 3;
+            this.labelMainCity.Text = "City";
+            this.labelMainCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // DailyLabel
+            // labelDaily
             // 
-            this.DailyLabel.AutoSize = true;
-            this.DailyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DailyLabel.Location = new System.Drawing.Point(852, 706);
-            this.DailyLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DailyLabel.Name = "DailyLabel";
-            this.DailyLabel.Size = new System.Drawing.Size(158, 67);
-            this.DailyLabel.TabIndex = 4;
-            this.DailyLabel.Text = "Daily";
-            this.DailyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDaily.AutoSize = true;
+            this.labelDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDaily.Location = new System.Drawing.Point(852, 706);
+            this.labelDaily.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelDaily.Name = "labelDaily";
+            this.labelDaily.Size = new System.Drawing.Size(158, 67);
+            this.labelDaily.TabIndex = 4;
+            this.labelDaily.Text = "Daily";
+            this.labelDaily.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
+            // panelDailyInfo
             // 
-            this.panel1.Controls.Add(this.DailyDate);
-            this.panel1.Controls.Add(this.DailyDesription);
-            this.panel1.Controls.Add(this.DailyTemp);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(24, 798);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1900, 581);
-            this.panel1.TabIndex = 5;
+            this.panelDailyInfo.Controls.Add(this.labelDailyDate);
+            this.panelDailyInfo.Controls.Add(this.DailyDesription);
+            this.panelDailyInfo.Controls.Add(this.labelDailyTemp);
+            this.panelDailyInfo.Controls.Add(this.pbDailyIcon);
+            this.panelDailyInfo.Location = new System.Drawing.Point(24, 798);
+            this.panelDailyInfo.Margin = new System.Windows.Forms.Padding(6);
+            this.panelDailyInfo.Name = "panelDailyInfo";
+            this.panelDailyInfo.Size = new System.Drawing.Size(1900, 581);
+            this.panelDailyInfo.TabIndex = 5;
             // 
-            // DailyDate
+            // labelDailyDate
             // 
-            this.DailyDate.AutoSize = true;
-            this.DailyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DailyDate.Location = new System.Drawing.Point(222, 65);
-            this.DailyDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DailyDate.Name = "DailyDate";
-            this.DailyDate.Size = new System.Drawing.Size(108, 48);
-            this.DailyDate.TabIndex = 7;
-            this.DailyDate.Text = "Date";
-            this.DailyDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDailyDate.AutoSize = true;
+            this.labelDailyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDailyDate.Location = new System.Drawing.Point(222, 65);
+            this.labelDailyDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelDailyDate.Name = "labelDailyDate";
+            this.labelDailyDate.Size = new System.Drawing.Size(108, 48);
+            this.labelDailyDate.TabIndex = 7;
+            this.labelDailyDate.Text = "Date";
+            this.labelDailyDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DailyDesription
             // 
@@ -149,25 +149,25 @@
             this.DailyDesription.TabIndex = 6;
             this.DailyDesription.Text = "Description";
             // 
-            // DailyTemp
+            // labelDailyTemp
             // 
-            this.DailyTemp.AutoSize = true;
-            this.DailyTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DailyTemp.Location = new System.Drawing.Point(218, 387);
-            this.DailyTemp.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DailyTemp.Name = "DailyTemp";
-            this.DailyTemp.Size = new System.Drawing.Size(127, 48);
-            this.DailyTemp.TabIndex = 5;
-            this.DailyTemp.Text = "Temp";
+            this.labelDailyTemp.AutoSize = true;
+            this.labelDailyTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDailyTemp.Location = new System.Drawing.Point(218, 387);
+            this.labelDailyTemp.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelDailyTemp.Name = "labelDailyTemp";
+            this.labelDailyTemp.Size = new System.Drawing.Size(127, 48);
+            this.labelDailyTemp.TabIndex = 5;
+            this.labelDailyTemp.Text = "Temp";
             // 
-            // pictureBox1
+            // pbDailyIcon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(130, 125);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 256);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbDailyIcon.Location = new System.Drawing.Point(130, 125);
+            this.pbDailyIcon.Margin = new System.Windows.Forms.Padding(6);
+            this.pbDailyIcon.Name = "pbDailyIcon";
+            this.pbDailyIcon.Size = new System.Drawing.Size(302, 256);
+            this.pbDailyIcon.TabIndex = 4;
+            this.pbDailyIcon.TabStop = false;
             // 
             // Refresh
             // 
@@ -336,24 +336,24 @@
             this.comboBox1.Size = new System.Drawing.Size(364, 33);
             this.comboBox1.TabIndex = 20;
             // 
-            // Date
+            // labelDate
             // 
-            this.Date.AutoSize = true;
-            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(66, 73);
-            this.Date.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(126, 55);
-            this.Date.TabIndex = 21;
-            this.Date.Text = "Date";
-            this.Date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.Location = new System.Drawing.Point(66, 73);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(126, 55);
+            this.labelDate.TabIndex = 21;
+            this.labelDate.Text = "Date";
+            this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1948, 1789);
-            this.Controls.Add(this.Date);
+            this.Controls.Add(this.labelDate);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Wind);
             this.Controls.Add(this.UV);
@@ -369,19 +369,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DayDetail);
             this.Controls.Add(this.Refresh);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DailyLabel);
-            this.Controls.Add(this.mainCity);
-            this.Controls.Add(this.mainCurrentDescription);
-            this.Controls.Add(this.mainCurrentTemp);
-            this.Controls.Add(this.mainCurrentIcon);
+            this.Controls.Add(this.panelDailyInfo);
+            this.Controls.Add(this.labelDaily);
+            this.Controls.Add(this.labelMainCity);
+            this.Controls.Add(this.labelMainCurrentDescription);
+            this.Controls.Add(this.labelMainCurrentTemp);
+            this.Controls.Add(this.pbMainCurrentIcon);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main";
             this.Text = "Weather";
-            ((System.ComponentModel.ISupportInitialize)(this.mainCurrentIcon)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
+            this.panelDailyInfo.ResumeLayout(false);
+            this.panelDailyInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDailyIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,16 +389,16 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox mainCurrentIcon;
-        private System.Windows.Forms.Label mainCurrentTemp;
-        private System.Windows.Forms.Label mainCurrentDescription;
-        private System.Windows.Forms.Label mainCity;
-        private System.Windows.Forms.Label DailyLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label DailyDate;
+        private System.Windows.Forms.PictureBox pbMainCurrentIcon;
+        private System.Windows.Forms.Label labelMainCurrentTemp;
+        private System.Windows.Forms.Label labelMainCurrentDescription;
+        private System.Windows.Forms.Label labelMainCity;
+        private System.Windows.Forms.Label labelDaily;
+        private System.Windows.Forms.Panel panelDailyInfo;
+        private System.Windows.Forms.Label labelDailyDate;
         private System.Windows.Forms.Label DailyDesription;
-        private System.Windows.Forms.Label DailyTemp;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelDailyTemp;
+        private System.Windows.Forms.PictureBox pbDailyIcon;
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.Label DayDetail;
         private System.Windows.Forms.Label label1;
@@ -414,6 +414,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.Label labelDate;
     }
 }
