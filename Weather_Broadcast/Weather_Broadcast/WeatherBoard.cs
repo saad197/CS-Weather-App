@@ -13,6 +13,7 @@ namespace Weather_Broadcast
     public partial class WeatherBoard : Form
     {
         List<City> cityList;
+        City currentSelectedCity;
         
         public WeatherBoard()
         {
@@ -42,6 +43,18 @@ namespace Weather_Broadcast
             }
 
             cbCityList.DataSource = cityNames;
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            // get current selected city obj 
+            string currentSelectedCityName = cbCityList.Text;
+
+            currentSelectedCity = new City(currentSelectedCityName);
+
+            // pass it to Main form
+            Main mainWeatherForm = new Main(currentSelectedCity);
+            mainWeatherForm.Show();
         }
     }
 }
