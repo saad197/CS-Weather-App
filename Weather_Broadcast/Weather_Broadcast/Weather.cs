@@ -11,6 +11,8 @@ public class Weather
     private double windspeed { get; set; }
     private double precipitation { get; set; }
     private string icon { get; set; }
+
+
 	public Weather()
 	{
 

@@ -52,9 +52,8 @@ namespace Weather_Broadcast
 
             currentSelectedCity = new City(currentSelectedCityName);
 
-            // pass it to Main form
-            Main mainWeatherForm = new Main(currentSelectedCity);
-            mainWeatherForm.Show();
+            // pass it to API 
+            API apiWeather = new API(currentSelectedCity);          
         }
     }
 }

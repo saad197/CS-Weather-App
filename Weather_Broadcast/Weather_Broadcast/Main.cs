@@ -12,15 +12,11 @@ namespace Weather_Broadcast
 {
     public partial class Main : Form
     {
-        City currentSelectedCity;
-        API weatherAPI;
+        Weather weather;
 
-        public Main( City selectedCity)
+        public Main()
         {
-            InitializeComponent();
-            currentSelectedCity = selectedCity;
-            weatherAPI = new API(currentSelectedCity);
-        }
-      
+            weather = new Weather();
+        }      
     }
 }
