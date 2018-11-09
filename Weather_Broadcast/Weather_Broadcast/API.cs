@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Windows.Forms;
 
 namespace Weather_Broadcast
 {
@@ -20,37 +21,45 @@ namespace Weather_Broadcast
             selectedCity = city;
 
             //fetch api data and store json
-            FetchApiData(city.Name);
-            ParsedData = ParseData(jsonData);
+            FetchApiData(selectedCity.Name);
+            MessageBox.Show(jsonData);
+            var res = Parse(jsonData);
+            MessageBox.Show(res);
+            
+
         }
 
+        //will parse data
+        public static dynamic Parse(string data)
+        {
+           MessageBox.Show(data);
+            dynamic result = JsonConvert.DeserializeObject<dynamic>(data);
+            dynamic name = result.current.condition.text;
+            Console.WriteLine(name);
 
-
+            return name.ToString();
+        }
 
         //used to make api call and retrieve json
         private async static void FetchApiData(string city)
         {
-            //appid is the api key
-            string apiLink = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=dd9231cf046811167ae556241662dc09";
+            var apiKey = "49dd73dca58244a685c52418182910";
+            var url = "http://api.apixu.com/v1/current.json?key=" + apiKey + "+&q=" + city;
 
             // ... Use HttpClient.
             using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.GetAsync(apiLink))
+            using (HttpResponseMessage response = await client.GetAsync(url))
             using (HttpContent content = response.Content)
-
             {
                 // ... Read the string.
                 string result = await content.ReadAsStringAsync();
+
+                //assign the json data
                 jsonData = result;
             }
         }
 
-        //will parse data
-        private dynamic ParseData(dynamic jsondata)
-        {
-            dynamic result = JsonConvert.DeserializeObject<dynamic>(jsondata);
-            return result;
-        }
+        
 
         
         
