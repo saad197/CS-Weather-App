@@ -20,25 +20,23 @@ namespace Weather_Broadcast
         {
             selectedCity = city;
 
+
             //fetch api data and store json
             FetchApiData(selectedCity.Name);
-            MessageBox.Show(jsonData);
-            var res = Parse(jsonData);
-            MessageBox.Show(res);
+            
+            if (jsonData != null)
+            {
+                MessageBox.Show(jsonData.current.temp_c.ToString());
+            }
+
+            else
+            {
+                MessageBox.Show("Loading....");
+            }
             
 
         }
 
-        //will parse data
-        public static dynamic Parse(string data)
-        {
-           MessageBox.Show(data);
-            dynamic result = JsonConvert.DeserializeObject<dynamic>(data);
-            dynamic name = result.current.condition.text;
-            Console.WriteLine(name);
-
-            return name.ToString();
-        }
 
         //used to make api call and retrieve json
         private async static void FetchApiData(string city)
@@ -46,7 +44,7 @@ namespace Weather_Broadcast
             var apiKey = "49dd73dca58244a685c52418182910";
             var url = "http://api.apixu.com/v1/current.json?key=" + apiKey + "+&q=" + city;
 
-            // ... Use HttpClient.
+            //fetch the result from api.
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.GetAsync(url))
             using (HttpContent content = response.Content)
@@ -54,8 +52,8 @@ namespace Weather_Broadcast
                 // ... Read the string.
                 string result = await content.ReadAsStringAsync();
 
-                //assign the json data
-                jsonData = result;
+                //assign the json data, parsed
+                jsonData = JsonConvert.DeserializeObject<dynamic>(result); ;
             }
         }
 
