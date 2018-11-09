@@ -52,6 +52,12 @@
     <Compile Include="API.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Constant.cs" />
+    <Compile Include="DailyWeatherControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DailyWeatherControl.Designer.cs">
+      <DependentUpon>DailyWeatherControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DailyWeatherControl.resx">
+      <DependentUpon>DailyWeatherControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
