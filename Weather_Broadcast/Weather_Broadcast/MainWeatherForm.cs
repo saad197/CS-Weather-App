@@ -13,11 +13,16 @@ namespace Weather_Broadcast
     public partial class MainWeatherForm : Form
     {
         Weather weather;
+        private string SelectedCity;
 
-        public MainWeatherForm()
+        public MainWeatherForm(string city)
         {
             InitializeComponent();
-            weather = new Weather();
+
+            SelectedCity = city;
+
+            weather = new Weather(SelectedCity);
+            //labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon
         }
     }
 }

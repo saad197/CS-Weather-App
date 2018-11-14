@@ -7,24 +7,19 @@ namespace Weather_Broadcast
 {
     public class API
     {
-        City selectedCity;
+        private string selectedCity;
         private static dynamic DataResponseFromAPI { get; set; }
         private static dynamic CurrentWeatherInfo { get; set; }     
         private static dynamic ForecastWeatherInfo { get; set; }
         public bool IsDataFullLoaded { get; } = false;
 
-        public API()
-        {
-
-        }
-
-        public API( City city)
+        public API( string city)
         {
             selectedCity = city;
 
 
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            FetchWeatherDataFromAPI(selectedCity.Name, Constant.NUMBER_OF_WEATHER_FORECAST_DAYS);
+            FetchWeatherDataFromAPI(selectedCity, Constant.NUMBER_OF_WEATHER_FORECAST_DAYS);
 
             if (DataResponseFromAPI != null)
             {

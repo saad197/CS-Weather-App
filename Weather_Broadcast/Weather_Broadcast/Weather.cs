@@ -4,6 +4,7 @@ namespace Weather_Broadcast
 {
     public class Weather
     {
+        private string selectedCity;
         private double temp { get; set; }
         private string condition { get; set; }
         private double humidity { get; set; }
@@ -16,9 +17,10 @@ namespace Weather_Broadcast
 
         API apiWeather;
 
-        public Weather()
+        public Weather(string city)
         {
-            apiWeather = new API();
+            selectedCity = city;
+            apiWeather = new API(selectedCity);
             temp = apiWeather.GetTempC();
             condition = apiWeather.GetWeatherCondition();
             humidity = apiWeather.GetHumidity();

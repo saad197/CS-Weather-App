@@ -50,10 +50,8 @@ namespace Weather_Broadcast
             // get current selected city obj 
             string currentSelectedCityName = cbCityList.Text;
 
-            currentSelectedCity = new City(currentSelectedCityName);
-
             // pass it to API 
-            API apiWeather = new API(currentSelectedCity);
+            API apiWeather = new API(currentSelectedCityName);
 
             // check if weather data responsed from api sucessfully
             // if it is show the main waether form
@@ -61,7 +59,7 @@ namespace Weather_Broadcast
 
             if (isDataReady)
             {
-                MainWeatherForm mainForm = new MainWeatherForm();
+                MainWeatherForm mainForm = new MainWeatherForm(currentSelectedCityName);
                 mainForm.Show();
             }
         }
