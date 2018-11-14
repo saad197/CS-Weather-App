@@ -1,10 +1,21 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Weather_Broadcast
 {
     public class Weather
     {
+        
         private string selectedCity;
+
+        // Fields to hold View Controls reference
+        public Label LabelCityName { get; private set; }
+        public Label LabelCurrentDate { get; private set; }
+        public Label LabelCurrentTemperature { get; private set; }
+        public Label LabelDescription { get; private set; }
+        public PictureBox PictureBoxIcon { get; private set; }
+
+        // Fields to hold weather data
         private double temp { get; set; }
         private string condition { get; set; }
         private double humidity { get; set; }
@@ -17,8 +28,9 @@ namespace Weather_Broadcast
 
         API apiWeather;
 
-        public Weather(string city)
+        public Weather(string city, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon)
         {
+            // init weather data
             selectedCity = city;
             apiWeather = new API(selectedCity);
             temp = apiWeather.GetTempC();
@@ -28,6 +40,13 @@ namespace Weather_Broadcast
             sunrise = apiWeather.GetSunRiseDayTime();
             sunset = apiWeather.GetSunSetDayTime();
             windspeed = apiWeather.GetWindSpeed();
+
+            // Init view control reference
+            LabelCityName = labelCityName;
+            LabelCurrentDate = labelDate;
+            LabelCurrentTemperature = labelCurrentTemp;
+            LabelDescription = labelDescription;
+            PictureBoxIcon = weatherIcon;
 
         }
 

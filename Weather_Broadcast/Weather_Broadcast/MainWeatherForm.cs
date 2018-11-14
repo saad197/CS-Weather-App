@@ -21,8 +21,9 @@ namespace Weather_Broadcast
 
             SelectedCity = city;
 
-            weather = new Weather(SelectedCity);
-            //labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon
+            weather = new Weather(SelectedCity,labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon);
+
+
         }
     }
 }
