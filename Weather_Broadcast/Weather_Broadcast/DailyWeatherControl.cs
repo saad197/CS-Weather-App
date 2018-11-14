@@ -15,8 +15,6 @@ namespace Weather_Broadcast
         public DailyWeatherControl()
         {
             InitializeComponent();
-        }
-
-        
+        }        
     }
 }

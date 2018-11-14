@@ -8,8 +8,9 @@ namespace Weather_Broadcast
     public class API
     {
         City selectedCity;
-        private static dynamic jsonData { get; set; }
-        private static dynamic ParsedData { get; set; }
+        private static dynamic CurrentWeatherResponseFromAPI { get; set; }
+        private static dynamic CurrentWeatherInfo { get; set; }
+        private static dynamic ForecastWeatherInfo { get; set; }
 
         public API()
         {
@@ -21,25 +22,29 @@ namespace Weather_Broadcast
             selectedCity = city;
 
 
-            //fetch api data and store json
-            FetchApiData(selectedCity.Name);
-            
-            if (jsonData != null)
-            {
-                MessageBox.Show(jsonData.current.temp_c.ToString());
-            }
+            //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
+            FetchCurrentWeatherInfo(selectedCity.Name);
 
+            if (CurrentWeatherResponseFromAPI != null)
+            {
+                // Extract current weather info from API response
+                CurrentWeatherInfo = CurrentWeatherResponseFromAPI.current;
+            }
+            
+            if (CurrentWeatherInfo != null)
+            {
+                MessageBox.Show(CurrentWeatherInfo.temp_c.ToString());
+            }
             else
             {
                 MessageBox.Show("Loading....");
-            }
-            
+            }          
 
         }
 
 
         //used to make api call and retrieve json
-        private async static void FetchApiData(string city)
+        private async static void FetchCurrentWeatherInfo(string city)
         {
             var apiKey = "49dd73dca58244a685c52418182910";
             var url = "http://api.apixu.com/v1/current.json?key=" + apiKey + "+&q=" + city;
@@ -53,22 +58,24 @@ namespace Weather_Broadcast
                 string result = await content.ReadAsStringAsync();
 
                 //assign the json data, parsed
-                jsonData = JsonConvert.DeserializeObject<dynamic>(result); ;
+                CurrentWeatherResponseFromAPI =  JsonConvert.DeserializeObject<dynamic>(result);                
             }
         }
-
+     
         
-
-        
-        
-        public double GetTemp()
+        public double GetTempC()
         {
-            return 0.0;
+            return CurrentWeatherInfo.temp_c;
+        }
+
+        public double GetTempF()
+        {
+            return CurrentWeatherInfo.temp_f;
         }
 
         public double GetHumidity()
         {
-            return 0.0;
+            return CurrentWeatherInfo.huminity;
         }
 
         public double GetRainChance()
@@ -78,12 +85,12 @@ namespace Weather_Broadcast
 
         public string GetWeatherCondition()
         {
-            return "cold";
+            return CurrentWeatherInfo.condition.text;
         }
 
         public double GetWindSpeed()
         {
-            return 0.0;
+            return CurrentWeatherInfo.wind_mph;
         }
 
         public void GetDailyWeather()

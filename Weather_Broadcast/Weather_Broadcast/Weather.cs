@@ -19,7 +19,7 @@ namespace Weather_Broadcast
         public Weather()
         {
             apiWeather = new API();
-            temp = apiWeather.GetTemp();
+            temp = apiWeather.GetTempC();
             condition = apiWeather.GetWeatherCondition();
             humidity = apiWeather.GetHumidity();
             rainChance = apiWeather.GetRainChance();
