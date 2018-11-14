@@ -22,5 +22,12 @@ namespace Weather_Broadcast
             { "California", 4350049 },
             { "Florida", 3851244 }
         };
+
+        // API KEY
+        public static string API_KEY = "49dd73dca58244a685c52418182910";
+
+        // URL TO FETCH
+        public static string FETCH_WEATHER_URL = "http://api.apixu.com/v1/forecast.json?key=";
+        public static int NUMBER_OF_WEATHER_FORECAST_DAYS = 5;
     }
 }

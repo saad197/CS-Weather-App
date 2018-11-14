@@ -8,9 +8,10 @@ namespace Weather_Broadcast
     public class API
     {
         City selectedCity;
-        private static dynamic CurrentWeatherResponseFromAPI { get; set; }
-        private static dynamic CurrentWeatherInfo { get; set; }
+        private static dynamic DataResponseFromAPI { get; set; }
+        private static dynamic CurrentWeatherInfo { get; set; }     
         private static dynamic ForecastWeatherInfo { get; set; }
+        public bool IsDataFullLoaded { get; } = false;
 
         public API()
         {
@@ -23,31 +24,28 @@ namespace Weather_Broadcast
 
 
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            FetchCurrentWeatherInfo(selectedCity.Name);
+            FetchWeatherDataFromAPI(selectedCity.Name, Constant.NUMBER_OF_WEATHER_FORECAST_DAYS);
 
-            if (CurrentWeatherResponseFromAPI != null)
+            if (DataResponseFromAPI != null)
             {
-                // Extract current weather info from API response
-                CurrentWeatherInfo = CurrentWeatherResponseFromAPI.current;
+                CurrentWeatherInfo = DataResponseFromAPI.current;
+                ForecastWeatherInfo = DataResponseFromAPI.forecast.forecastday;
             }
-            
-            if (CurrentWeatherInfo != null)
+
+            if (CurrentWeatherInfo is null || ForecastWeatherInfo is null)
             {
-                MessageBox.Show(CurrentWeatherInfo.temp_c.ToString());
+                MessageBox.Show("Loading ...");
             }
             else
             {
-                MessageBox.Show("Loading....");
-            }          
+                IsDataFullLoaded = true;
+            }
 
         }
 
-
-        //used to make api call and retrieve json
-        private async static void FetchCurrentWeatherInfo(string city)
+        private async static void FetchWeatherDataFromAPI(string city, int numberOfDays)
         {
-            var apiKey = "49dd73dca58244a685c52418182910";
-            var url = "http://api.apixu.com/v1/current.json?key=" + apiKey + "+&q=" + city;
+            var url = Constant.FETCH_WEATHER_URL + Constant.API_KEY + "+&q=" + city + "&days=" + numberOfDays;
 
             //fetch the result from api.
             using (HttpClient client = new HttpClient())
@@ -58,11 +56,11 @@ namespace Weather_Broadcast
                 string result = await content.ReadAsStringAsync();
 
                 //assign the json data, parsed
-                CurrentWeatherResponseFromAPI =  JsonConvert.DeserializeObject<dynamic>(result);                
+                DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
             }
         }
-     
-        
+
+
         public double GetTempC()
         {
             return CurrentWeatherInfo.temp_c;
@@ -75,7 +73,7 @@ namespace Weather_Broadcast
 
         public double GetHumidity()
         {
-            return CurrentWeatherInfo.huminity;
+            return CurrentWeatherInfo.humidity;
         }
 
         public double GetRainChance()

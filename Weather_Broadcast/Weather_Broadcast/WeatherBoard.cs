@@ -53,7 +53,17 @@ namespace Weather_Broadcast
             currentSelectedCity = new City(currentSelectedCityName);
 
             // pass it to API 
-            API apiWeather = new API(currentSelectedCity);          
+            API apiWeather = new API(currentSelectedCity);
+
+            // check if weather data responsed from api sucessfully
+            // if it is show the main waether form
+            bool isDataReady = apiWeather.IsDataFullLoaded;
+
+            if (isDataReady)
+            {
+                MainWeatherForm mainForm = new MainWeatherForm();
+                mainForm.Show();
+            }
         }
     }
 }

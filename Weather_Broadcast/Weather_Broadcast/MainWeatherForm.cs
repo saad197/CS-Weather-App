@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace Weather_Broadcast
 {
-    public partial class Main : Form
+    public partial class MainWeatherForm : Form
     {
         Weather weather;
 
-        public Main()
+        public MainWeatherForm()
         {
+            InitializeComponent();
             weather = new Weather();
         }
     }

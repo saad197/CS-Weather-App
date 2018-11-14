@@ -59,11 +59,11 @@
       <DependentUpon>DailyWeatherControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="MainWeatherForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="MainWeatherForm.Designer.cs">
+      <DependentUpon>MainWeatherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherBoard.cs">
@@ -77,8 +77,8 @@
     <EmbeddedResource Include="DailyWeatherControl.resx">
       <DependentUpon>DailyWeatherControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="MainWeatherForm.resx">
+      <DependentUpon>MainWeatherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WeatherBoard.resx">
       <DependentUpon>WeatherBoard.cs</DependentUpon>

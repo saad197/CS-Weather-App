@@ -1,6 +1,6 @@
 ﻿namespace Weather_Broadcast
 {
-    partial class Main
+    partial class MainWeatherForm
     {
         /// <summary>
         /// Required designer variable.
