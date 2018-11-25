@@ -14,7 +14,7 @@ namespace Weather_Broadcast
         public Label LabelCurrentTemperature { get; private set; }
         public Label LabelDescription { get; private set; }
         public PictureBox PictureBoxIcon { get; private set; }
-        public dynamic WeatherResponseFromAPI { get; }
+        public dynamic WeatherResponseFromAPI { get; private set; }
 
         // Fields to hold weather data
         private double temp { get; set; }
@@ -38,47 +38,68 @@ namespace Weather_Broadcast
             LabelCurrentTemperature = labelCurrentTemp;
             LabelDescription = labelDescription;
             PictureBoxIcon = weatherIcon;
+            DisplayCurrentWeather();
 
         }
-
-        public static void DisplayWeather()
+        
+        public void DisplayCurrentWeather()
         {
+            DisplayWeather();
+            DisplayTemp();
+            DisplayCurrentDate();
+            DisplayDescription();
+            DisplayHumidity();
+            DisplayRainChance();
+            DisplayDayNight();
+            DisplayWindSpeed();
+            DisplayIcon();
             
         }
 
-        public static void DisplayTemp()
+        public void DisplayWeather()
+        {
+            MessageBox.Show(WeatherResponseFromAPI.ToString());
+            LabelCityName.Text = WeatherResponseFromAPI.location.name;
+        }
+
+        public void DisplayTemp()
+        {
+            LabelCurrentTemperature.Text = WeatherResponseFromAPI.current.temp_c;
+        }
+
+        public void DisplayCurrentDate()
+        {
+            LabelCurrentDate.Text = WeatherResponseFromAPI.forecast.forecastday[0].date.ToString();
+        }
+
+        public void DisplayDescription()
+        {
+            LabelDescription.Text = WeatherResponseFromAPI.current.condition.text.ToString();
+        }
+        public void DisplayHumidity()
         {
 
         }
 
-        public static void DisplayBackground()
+        public void DisplayRainChance()
         {
 
         }
 
-        public static void DisplayHumidity()
+        public void DisplayDayNight()
         {
 
         }
 
-        public static void DisplayRainChance()
+        public void DisplayWindSpeed()
         {
 
         }
 
-        public static void DisplayDayNight()
+        public void DisplayIcon()
         {
-
-        }
-
-        public static void DisplayWindSpeed()
-        {
-
-        }
-
-        public static void DisplayIcon()
-        {
-
+            var UrlPath = WeatherResponseFromAPI.current.condition.icon;
+            PictureBoxIcon.Load(@"http:" + UrlPath.ToString());
         }
     }
 
