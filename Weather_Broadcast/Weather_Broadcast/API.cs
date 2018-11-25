@@ -17,20 +17,19 @@ namespace Weather_Broadcast
         {
             selectedCity = city;
 
-
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
             FetchWeatherDataFromAPI(selectedCity, Constant.NUMBER_OF_WEATHER_FORECAST_DAYS);
 
-            if (DataResponseFromAPI != null)
-            {
-                CurrentWeatherInfo = DataResponseFromAPI.current;
-                ForecastWeatherInfo = DataResponseFromAPI.forecast.forecastday;
+            //if (DataResponseFromAPI != null)
+            //{
+            //    CurrentWeatherInfo = DataResponseFromAPI.current;
+            //    ForecastWeatherInfo = DataResponseFromAPI.forecast.forecastday;
 
-                if (CurrentWeatherInfo != null || ForecastWeatherInfo != null)
-                {
-                    IsDataFullLoaded = true;
-                }
-            }
+            //    if (CurrentWeatherInfo != null || ForecastWeatherInfo != null)
+            //    {
+            //        IsDataFullLoaded = true;
+            //    }
+            //}
         }
 
         private async static void FetchWeatherDataFromAPI(string city, int numberOfDays)
@@ -44,56 +43,13 @@ namespace Weather_Broadcast
             {
                 // ... Read the string.
                 string result = await content.ReadAsStringAsync();
-
                 //assign the json data, parsed
                 DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
+
+                // Passing the response from api to Weather main form
+                MainWeatherForm mainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
+                mainWeatherForm.Show();
             }
-        }
-
-
-        public double GetTempC()
-        {
-            return CurrentWeatherInfo.temp_c;
-        }
-
-        public double GetTempF()
-        {
-            return CurrentWeatherInfo.temp_f;
-        }
-
-        public double GetHumidity()
-        {
-            return CurrentWeatherInfo.humidity;
-        }
-
-        public double GetRainChance()
-        {
-            return 0.0;
-        }
-
-        public string GetWeatherCondition()
-        {
-            return CurrentWeatherInfo.condition.text;
-        }
-
-        public double GetWindSpeed()
-        {
-            return CurrentWeatherInfo.wind_mph;
-        }
-
-        public void GetDailyWeather()
-        {
-
-        }
-
-        public DateTime GetSunRiseDayTime()
-        {
-            return new DateTime();
-        }
-
-        public DateTime GetSunSetDayTime()
-        {
-            return new DateTime();
-        }
+        }      
     }
 }
