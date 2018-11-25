@@ -25,17 +25,12 @@ namespace Weather_Broadcast
             {
                 CurrentWeatherInfo = DataResponseFromAPI.current;
                 ForecastWeatherInfo = DataResponseFromAPI.forecast.forecastday;
-            }
 
-            if (CurrentWeatherInfo is null || ForecastWeatherInfo is null)
-            {
-                MessageBox.Show("Loading ...");
+                if (CurrentWeatherInfo != null || ForecastWeatherInfo != null)
+                {
+                    IsDataFullLoaded = true;
+                }
             }
-            else
-            {
-                IsDataFullLoaded = true;
-            }
-
         }
 
         private async static void FetchWeatherDataFromAPI(string city, int numberOfDays)
