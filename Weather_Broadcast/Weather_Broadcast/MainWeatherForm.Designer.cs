@@ -49,10 +49,10 @@
             // 
             // pbMainCurrentIcon
             // 
-            this.pbMainCurrentIcon.Location = new System.Drawing.Point(486, 192);
-            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.pbMainCurrentIcon.Location = new System.Drawing.Point(243, 100);
+            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbMainCurrentIcon.Name = "pbMainCurrentIcon";
-            this.pbMainCurrentIcon.Size = new System.Drawing.Size(302, 256);
+            this.pbMainCurrentIcon.Size = new System.Drawing.Size(151, 133);
             this.pbMainCurrentIcon.TabIndex = 0;
             this.pbMainCurrentIcon.TabStop = false;
             // 
@@ -62,10 +62,10 @@
             this.labelMainCurrentTemp.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCurrentTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCurrentTemp.ForeColor = System.Drawing.Color.Black;
-            this.labelMainCurrentTemp.Location = new System.Drawing.Point(840, 202);
-            this.labelMainCurrentTemp.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelMainCurrentTemp.Location = new System.Drawing.Point(420, 105);
+            this.labelMainCurrentTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMainCurrentTemp.Name = "labelMainCurrentTemp";
-            this.labelMainCurrentTemp.Size = new System.Drawing.Size(180, 67);
+            this.labelMainCurrentTemp.Size = new System.Drawing.Size(94, 33);
             this.labelMainCurrentTemp.TabIndex = 1;
             this.labelMainCurrentTemp.Text = "Temp";
             // 
@@ -75,10 +75,10 @@
             this.labelMainCurrentDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCurrentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCurrentDescription.ForeColor = System.Drawing.Color.Black;
-            this.labelMainCurrentDescription.Location = new System.Drawing.Point(840, 332);
-            this.labelMainCurrentDescription.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelMainCurrentDescription.Location = new System.Drawing.Point(420, 173);
+            this.labelMainCurrentDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMainCurrentDescription.Name = "labelMainCurrentDescription";
-            this.labelMainCurrentDescription.Size = new System.Drawing.Size(329, 67);
+            this.labelMainCurrentDescription.Size = new System.Drawing.Size(173, 33);
             this.labelMainCurrentDescription.TabIndex = 2;
             this.labelMainCurrentDescription.Text = "Description";
             // 
@@ -88,10 +88,10 @@
             this.labelMainCity.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCity.ForeColor = System.Drawing.Color.Black;
-            this.labelMainCity.Location = new System.Drawing.Point(574, 73);
-            this.labelMainCity.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelMainCity.Location = new System.Drawing.Point(287, 38);
+            this.labelMainCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMainCity.Name = "labelMainCity";
-            this.labelMainCity.Size = new System.Drawing.Size(129, 67);
+            this.labelMainCity.Size = new System.Drawing.Size(66, 33);
             this.labelMainCity.TabIndex = 3;
             this.labelMainCity.Text = "City";
             this.labelMainCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,10 +101,10 @@
             this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Refresh.Location = new System.Drawing.Point(1454, 40);
-            this.Refresh.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Refresh.Location = new System.Drawing.Point(727, 21);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(172, 100);
+            this.Refresh.Size = new System.Drawing.Size(86, 52);
             this.Refresh.TabIndex = 6;
             this.Refresh.Text = "⟳";
             this.Refresh.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Calgary"});
-            this.comboBox1.Location = new System.Drawing.Point(1301, 202);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.comboBox1.Location = new System.Drawing.Point(650, 105);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(364, 33);
+            this.comboBox1.Size = new System.Drawing.Size(184, 21);
             this.comboBox1.TabIndex = 20;
             // 
             // labelDate
@@ -126,10 +126,10 @@
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.Color.Black;
-            this.labelDate.Location = new System.Drawing.Point(64, 73);
-            this.labelDate.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelDate.Location = new System.Drawing.Point(32, 38);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(126, 55);
+            this.labelDate.Size = new System.Drawing.Size(63, 29);
             this.labelDate.TabIndex = 21;
             this.labelDate.Text = "Date";
             this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,9 +142,10 @@
             this.dailyWeatherFlowPanel.Controls.Add(this.dailyWeatherControl4);
             this.dailyWeatherFlowPanel.Controls.Add(this.dailyWeatherControl5);
             this.dailyWeatherFlowPanel.Controls.Add(this.dailyWeatherControl6);
-            this.dailyWeatherFlowPanel.Location = new System.Drawing.Point(44, 696);
+            this.dailyWeatherFlowPanel.Location = new System.Drawing.Point(22, 362);
+            this.dailyWeatherFlowPanel.Margin = new System.Windows.Forms.Padding(2);
             this.dailyWeatherFlowPanel.Name = "dailyWeatherFlowPanel";
-            this.dailyWeatherFlowPanel.Size = new System.Drawing.Size(1582, 476);
+            this.dailyWeatherFlowPanel.Size = new System.Drawing.Size(791, 248);
             this.dailyWeatherFlowPanel.TabIndex = 22;
             // 
             // dailyWeatherControl7
@@ -182,7 +183,7 @@
             this.dailyWeatherControl5.BackColor = System.Drawing.SystemColors.Control;
             this.dailyWeatherControl5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dailyWeatherControl5.Date = "11/11";
-            this.dailyWeatherControl5.Location = new System.Drawing.Point(809, 25);
+            this.dailyWeatherControl5.Location = new System.Drawing.Point(25, 493);
             this.dailyWeatherControl5.Margin = new System.Windows.Forms.Padding(25);
             this.dailyWeatherControl5.Name = "dailyWeatherControl5";
             this.dailyWeatherControl5.Size = new System.Drawing.Size(342, 418);
@@ -197,7 +198,7 @@
             this.dailyWeatherControl6.BackColor = System.Drawing.SystemColors.Control;
             this.dailyWeatherControl6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dailyWeatherControl6.Date = "11/11";
-            this.dailyWeatherControl6.Location = new System.Drawing.Point(1201, 25);
+            this.dailyWeatherControl6.Location = new System.Drawing.Point(417, 493);
             this.dailyWeatherControl6.Margin = new System.Windows.Forms.Padding(25);
             this.dailyWeatherControl6.Name = "dailyWeatherControl6";
             this.dailyWeatherControl6.Size = new System.Drawing.Size(342, 418);
@@ -254,10 +255,10 @@
             // 
             // MainWeatherForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1682, 1310);
+            this.ClientSize = new System.Drawing.Size(864, 812);
             this.Controls.Add(this.dailyWeatherFlowPanel);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.comboBox1);
@@ -267,9 +268,9 @@
             this.Controls.Add(this.labelMainCurrentTemp);
             this.Controls.Add(this.pbMainCurrentIcon);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainWeatherForm";
-            this.Text = "Weather";       
+            this.Text = "Weather";
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
             this.dailyWeatherFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
