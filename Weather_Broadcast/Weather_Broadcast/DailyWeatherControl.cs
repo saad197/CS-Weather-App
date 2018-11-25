@@ -44,7 +44,7 @@ namespace Weather_Broadcast
             get { return WeatherIconPictureBox.ImageLocation; }
             set
             {
-                WeatherIconPictureBox.Image = Image.FromFile("../images/" + value.ToString());
+                //WeatherIconPictureBox.Image = Image.FromFile("../images/" + value.ToString());
             }
         }
 
