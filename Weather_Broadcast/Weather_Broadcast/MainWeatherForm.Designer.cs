@@ -36,13 +36,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelDate = new System.Windows.Forms.Label();
             this.dailyWeatherFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.dailyWeatherControl1 = new Weather_Broadcast.DailyWeatherControl();
-            this.dailyWeatherControl2 = new Weather_Broadcast.DailyWeatherControl();
-            this.dailyWeatherControl3 = new Weather_Broadcast.DailyWeatherControl();
+            this.dailyWeatherControl7 = new Weather_Broadcast.DailyWeatherControl();
             this.dailyWeatherControl4 = new Weather_Broadcast.DailyWeatherControl();
             this.dailyWeatherControl5 = new Weather_Broadcast.DailyWeatherControl();
             this.dailyWeatherControl6 = new Weather_Broadcast.DailyWeatherControl();
-            this.dailyWeatherControl7 = new Weather_Broadcast.DailyWeatherControl();
+            this.dailyWeatherControl1 = new Weather_Broadcast.DailyWeatherControl();
+            this.dailyWeatherControl2 = new Weather_Broadcast.DailyWeatherControl();
+            this.dailyWeatherControl3 = new Weather_Broadcast.DailyWeatherControl();
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
             this.dailyWeatherFlowPanel.SuspendLayout();
             this.SuspendLayout();
@@ -147,50 +147,20 @@
             this.dailyWeatherFlowPanel.Size = new System.Drawing.Size(1582, 476);
             this.dailyWeatherFlowPanel.TabIndex = 22;
             // 
-            // dailyWeatherControl1
+            // dailyWeatherControl7
             // 
-            this.dailyWeatherControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.dailyWeatherControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dailyWeatherControl1.Date = "11/11";
-            this.dailyWeatherControl1.Location = new System.Drawing.Point(30, 30);
-            this.dailyWeatherControl1.Margin = new System.Windows.Forms.Padding(30);
-            this.dailyWeatherControl1.Name = "dailyWeatherControl1";
-            this.dailyWeatherControl1.Size = new System.Drawing.Size(342, 418);
-            this.dailyWeatherControl1.TabIndex = 0;
-            this.dailyWeatherControl1.TempC = "12 º C";
-            this.dailyWeatherControl1.WeatherDescription = "A mix of sun and clouds";
-            this.dailyWeatherControl1.WeatherIcon = null;
-            this.dailyWeatherControl1.WeekDayTitle = "SUNDAY";
-            // 
-            // dailyWeatherControl2
-            // 
-            this.dailyWeatherControl2.BackColor = System.Drawing.SystemColors.Control;
-            this.dailyWeatherControl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dailyWeatherControl2.Date = "11/11";
-            this.dailyWeatherControl2.Location = new System.Drawing.Point(432, 30);
-            this.dailyWeatherControl2.Margin = new System.Windows.Forms.Padding(30);
-            this.dailyWeatherControl2.Name = "dailyWeatherControl2";
-            this.dailyWeatherControl2.Size = new System.Drawing.Size(342, 418);
-            this.dailyWeatherControl2.TabIndex = 1;
-            this.dailyWeatherControl2.TempC = "12 º C";
-            this.dailyWeatherControl2.WeatherDescription = "A mix of sun and clouds";
-            this.dailyWeatherControl2.WeatherIcon = null;
-            this.dailyWeatherControl2.WeekDayTitle = "SUNDAY";
-            // 
-            // dailyWeatherControl3
-            // 
-            this.dailyWeatherControl3.BackColor = System.Drawing.SystemColors.Control;
-            this.dailyWeatherControl3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dailyWeatherControl3.Date = "11/11";
-            this.dailyWeatherControl3.Location = new System.Drawing.Point(834, 30);
-            this.dailyWeatherControl3.Margin = new System.Windows.Forms.Padding(30);
-            this.dailyWeatherControl3.Name = "dailyWeatherControl3";
-            this.dailyWeatherControl3.Size = new System.Drawing.Size(342, 418);
-            this.dailyWeatherControl3.TabIndex = 2;
-            this.dailyWeatherControl3.TempC = "12 º C";
-            this.dailyWeatherControl3.WeatherDescription = "A mix of sun and clouds";
-            this.dailyWeatherControl3.WeatherIcon = null;
-            this.dailyWeatherControl3.WeekDayTitle = "SUNDAY";
+            this.dailyWeatherControl7.BackColor = System.Drawing.SystemColors.Control;
+            this.dailyWeatherControl7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dailyWeatherControl7.Date = "11/11";
+            this.dailyWeatherControl7.Location = new System.Drawing.Point(25, 25);
+            this.dailyWeatherControl7.Margin = new System.Windows.Forms.Padding(25);
+            this.dailyWeatherControl7.Name = "dailyWeatherControl7";
+            this.dailyWeatherControl7.Size = new System.Drawing.Size(342, 418);
+            this.dailyWeatherControl7.TabIndex = 3;
+            this.dailyWeatherControl7.TempC = "12 º C";
+            this.dailyWeatherControl7.WeatherDescription = "A mix of sun and clouds";
+            this.dailyWeatherControl7.WeatherIcon = null;
+            this.dailyWeatherControl7.WeekDayTitle = "SUNDAY";
             // 
             // dailyWeatherControl4
             // 
@@ -237,20 +207,50 @@
             this.dailyWeatherControl6.WeatherIcon = null;
             this.dailyWeatherControl6.WeekDayTitle = "SUNDAY";
             // 
-            // dailyWeatherControl7
+            // dailyWeatherControl1
             // 
-            this.dailyWeatherControl7.BackColor = System.Drawing.SystemColors.Control;
-            this.dailyWeatherControl7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dailyWeatherControl7.Date = "11/11";
-            this.dailyWeatherControl7.Location = new System.Drawing.Point(25, 25);
-            this.dailyWeatherControl7.Margin = new System.Windows.Forms.Padding(25);
-            this.dailyWeatherControl7.Name = "dailyWeatherControl7";
-            this.dailyWeatherControl7.Size = new System.Drawing.Size(342, 418);
-            this.dailyWeatherControl7.TabIndex = 3;
-            this.dailyWeatherControl7.TempC = "12 º C";
-            this.dailyWeatherControl7.WeatherDescription = "A mix of sun and clouds";
-            this.dailyWeatherControl7.WeatherIcon = null;
-            this.dailyWeatherControl7.WeekDayTitle = "SUNDAY";
+            this.dailyWeatherControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.dailyWeatherControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dailyWeatherControl1.Date = "11/11";
+            this.dailyWeatherControl1.Location = new System.Drawing.Point(30, 30);
+            this.dailyWeatherControl1.Margin = new System.Windows.Forms.Padding(30);
+            this.dailyWeatherControl1.Name = "dailyWeatherControl1";
+            this.dailyWeatherControl1.Size = new System.Drawing.Size(342, 418);
+            this.dailyWeatherControl1.TabIndex = 0;
+            this.dailyWeatherControl1.TempC = "12 º C";
+            this.dailyWeatherControl1.WeatherDescription = "A mix of sun and clouds";
+            this.dailyWeatherControl1.WeatherIcon = null;
+            this.dailyWeatherControl1.WeekDayTitle = "SUNDAY";
+            // 
+            // dailyWeatherControl2
+            // 
+            this.dailyWeatherControl2.BackColor = System.Drawing.SystemColors.Control;
+            this.dailyWeatherControl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dailyWeatherControl2.Date = "11/11";
+            this.dailyWeatherControl2.Location = new System.Drawing.Point(432, 30);
+            this.dailyWeatherControl2.Margin = new System.Windows.Forms.Padding(30);
+            this.dailyWeatherControl2.Name = "dailyWeatherControl2";
+            this.dailyWeatherControl2.Size = new System.Drawing.Size(342, 418);
+            this.dailyWeatherControl2.TabIndex = 1;
+            this.dailyWeatherControl2.TempC = "12 º C";
+            this.dailyWeatherControl2.WeatherDescription = "A mix of sun and clouds";
+            this.dailyWeatherControl2.WeatherIcon = null;
+            this.dailyWeatherControl2.WeekDayTitle = "SUNDAY";
+            // 
+            // dailyWeatherControl3
+            // 
+            this.dailyWeatherControl3.BackColor = System.Drawing.SystemColors.Control;
+            this.dailyWeatherControl3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dailyWeatherControl3.Date = "11/11";
+            this.dailyWeatherControl3.Location = new System.Drawing.Point(834, 30);
+            this.dailyWeatherControl3.Margin = new System.Windows.Forms.Padding(30);
+            this.dailyWeatherControl3.Name = "dailyWeatherControl3";
+            this.dailyWeatherControl3.Size = new System.Drawing.Size(342, 418);
+            this.dailyWeatherControl3.TabIndex = 2;
+            this.dailyWeatherControl3.TempC = "12 º C";
+            this.dailyWeatherControl3.WeatherDescription = "A mix of sun and clouds";
+            this.dailyWeatherControl3.WeatherIcon = null;
+            this.dailyWeatherControl3.WeekDayTitle = "SUNDAY";
             // 
             // MainWeatherForm
             // 
@@ -269,7 +269,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.Name = "MainWeatherForm";
-            this.Text = "Weather";
+            this.Text = "Weather";       
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
             this.dailyWeatherFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
