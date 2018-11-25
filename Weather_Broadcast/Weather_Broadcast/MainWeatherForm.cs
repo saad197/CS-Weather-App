@@ -19,6 +19,5 @@ namespace Weather_Broadcast
             InitializeComponent();
             weather = new Weather(WeatherResponse, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon);
         }
-
     }
 }

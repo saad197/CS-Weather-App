@@ -113,5 +113,55 @@
   <ItemGroup>
     <None Include="Resources\sunny.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\113.png" />
+    <Content Include="Resources\116.png" />
+    <Content Include="Resources\119.png" />
+    <Content Include="Resources\122.png" />
+    <Content Include="Resources\143.png" />
+    <Content Include="Resources\176.png" />
+    <Content Include="Resources\179.png" />
+    <Content Include="Resources\182.png" />
+    <Content Include="Resources\185.png" />
+    <Content Include="Resources\200.png" />
+    <Content Include="Resources\227.png" />
+    <Content Include="Resources\230.png" />
+    <Content Include="Resources\248.png" />
+    <Content Include="Resources\260.png" />
+    <Content Include="Resources\263.png" />
+    <Content Include="Resources\266.png" />
+    <Content Include="Resources\281.png" />
+    <Content Include="Resources\284.png" />
+    <Content Include="Resources\293.png" />
+    <Content Include="Resources\296.png" />
+    <Content Include="Resources\299.png" />
+    <Content Include="Resources\302.png" />
+    <Content Include="Resources\305.png" />
+    <Content Include="Resources\308.png" />
+    <Content Include="Resources\311.png" />
+    <Content Include="Resources\314.png" />
+    <Content Include="Resources\317.png" />
+    <Content Include="Resources\320.png" />
+    <Content Include="Resources\323.png" />
+    <Content Include="Resources\326.png" />
+    <Content Include="Resources\329.png" />
+    <Content Include="Resources\332.png" />
+    <Content Include="Resources\335.png" />
+    <Content Include="Resources\338.png" />
+    <Content Include="Resources\350.png" />
+    <Content Include="Resources\353.png" />
+    <Content Include="Resources\356.png" />
+    <Content Include="Resources\359.png" />
+    <Content Include="Resources\362.png" />
+    <Content Include="Resources\365.png" />
+    <Content Include="Resources\368.png" />
+    <Content Include="Resources\371.png" />
+    <Content Include="Resources\374.png" />
+    <Content Include="Resources\377.png" />
+    <Content Include="Resources\386.png" />
+    <Content Include="Resources\389.png" />
+    <Content Include="Resources\392.png" />
+    <Content Include="Resources\395.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
