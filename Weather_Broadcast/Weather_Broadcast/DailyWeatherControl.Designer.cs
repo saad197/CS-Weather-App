@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DayNameLabel = new System.Windows.Forms.Label();
+            this.WeekDayLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
             this.WeatherDescriptionLabel = new System.Windows.Forms.Label();
             this.WeatherIconPictureBox = new System.Windows.Forms.PictureBox();
@@ -38,15 +38,15 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DayNameLabel
+            // WeekDayLabel
             // 
-            this.DayNameLabel.AutoSize = true;
-            this.DayNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DayNameLabel.Location = new System.Drawing.Point(127, 28);
-            this.DayNameLabel.Name = "DayNameLabel";
-            this.DayNameLabel.Size = new System.Drawing.Size(180, 42);
-            this.DayNameLabel.TabIndex = 0;
-            this.DayNameLabel.Text = "SUNDAY";
+            this.WeekDayLabel.AutoSize = true;
+            this.WeekDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeekDayLabel.Location = new System.Drawing.Point(127, 28);
+            this.WeekDayLabel.Name = "WeekDayLabel";
+            this.WeekDayLabel.Size = new System.Drawing.Size(180, 42);
+            this.WeekDayLabel.TabIndex = 0;
+            this.WeekDayLabel.Text = "SUNDAY";
             // 
             // DateLabel
             // 
@@ -89,7 +89,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.DayNameLabel);
+            this.panel1.Controls.Add(this.WeekDayLabel);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -118,7 +118,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label DayNameLabel;
+        private System.Windows.Forms.Label WeekDayLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label WeatherDescriptionLabel;
         private System.Windows.Forms.PictureBox WeatherIconPictureBox;
