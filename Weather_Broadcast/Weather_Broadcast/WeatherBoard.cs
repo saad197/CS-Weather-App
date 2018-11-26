@@ -13,7 +13,6 @@ namespace Weather_Broadcast
     public partial class WeatherBoard : Form
     {
         List<City> cityList;
-        City currentSelectedCity;
         
         public WeatherBoard()
         {
@@ -52,7 +51,8 @@ namespace Weather_Broadcast
 
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName);
-        
+            //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
+            API.FetchWeatherDataFromAPI();
         }
     }
 }

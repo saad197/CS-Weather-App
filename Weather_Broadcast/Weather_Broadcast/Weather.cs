@@ -5,9 +5,6 @@ namespace Weather_Broadcast
 {
     public class Weather
     {
-        
-        private string selectedCity;
-
         // Fields to hold View Controls reference
         public Label LabelCityName { get; private set; }
         public Label LabelCurrentDate { get; private set; }
@@ -15,19 +12,11 @@ namespace Weather_Broadcast
         public Label LabelDescription { get; private set; }
         public PictureBox PictureBoxIcon { get; private set; }
         public dynamic WeatherResponseFromAPI { get; private set; }
+        public FlowLayoutPanel WeatherForecastPanel { get; private set; }
 
-        // Fields to hold weather data
-        private double temp { get; set; }
-        private string condition { get; set; }
-        private double humidity { get; set; }
-        private double rainChance { get; set; }
-        private DateTime sunrise { get; set; }
-        private DateTime sunset { get; set; }
-        private double windspeed { get; set; }
-        private double precipitation { get; set; }
-        private string icon { get; set; }
-      
-        public Weather(dynamic dataResponse, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon)
+
+        public Weather(dynamic dataResponse, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon,
+                       FlowLayoutPanel weatherForecastPanel)
         {
             // init weather data
             WeatherResponseFromAPI = dataResponse;
@@ -38,8 +27,7 @@ namespace Weather_Broadcast
             LabelCurrentTemperature = labelCurrentTemp;
             LabelDescription = labelDescription;
             PictureBoxIcon = weatherIcon;
-            DisplayCurrentWeather();
-
+            WeatherForecastPanel = weatherForecastPanel;
         }
         
         public void DisplayCurrentWeather()
@@ -52,55 +40,70 @@ namespace Weather_Broadcast
             DisplayRainChance();
             DisplayDayNight();
             DisplayWindSpeed();
-            DisplayIcon();
-            
+            DisplayIcon();          
         }
 
-        public void DisplayWeather()
-        {
-            MessageBox.Show(WeatherResponseFromAPI.ToString());
+        private void DisplayWeather()
+        {          
             LabelCityName.Text = WeatherResponseFromAPI.location.name;
         }
 
-        public void DisplayTemp()
+        private void DisplayTemp()
         {
-            LabelCurrentTemperature.Text = WeatherResponseFromAPI.current.temp_c;
+            LabelCurrentTemperature.Text = WeatherResponseFromAPI.current.temp_c + " ˚C";
         }
 
-        public void DisplayCurrentDate()
+        private void DisplayCurrentDate()
         {
             LabelCurrentDate.Text = WeatherResponseFromAPI.forecast.forecastday[0].date.ToString();
         }
 
-        public void DisplayDescription()
+        private void DisplayDescription()
         {
             LabelDescription.Text = WeatherResponseFromAPI.current.condition.text.ToString();
         }
-        public void DisplayHumidity()
+
+        private void DisplayHumidity()
         {
 
         }
 
-        public void DisplayRainChance()
+        private void DisplayRainChance()
         {
 
         }
 
-        public void DisplayDayNight()
+        private void DisplayDayNight()
         {
 
         }
 
-        public void DisplayWindSpeed()
+        private void DisplayWindSpeed()
         {
 
         }
 
-        public void DisplayIcon()
+        private void DisplayIcon()
         {
             var UrlPath = WeatherResponseFromAPI.current.condition.icon;
             PictureBoxIcon.Load(@"http:" + UrlPath.ToString());
         }
+
+        public void DisplayWeatherForecast()
+        {
+            var weatherForecastDaysInfo = WeatherResponseFromAPI.forecast.forecastday;          
+
+            foreach (var dayInfo in weatherForecastDaysInfo)
+            {             
+                DailyWeatherControl dailyForecastUI = new DailyWeatherControl();
+                dailyForecastUI.Date = dayInfo.date;
+                dailyForecastUI.WeatherDescription = dayInfo.day.condition.text;
+                dailyForecastUI.WeatherIcon = dayInfo.day.condition.icon.ToString();
+                dailyForecastUI.TempC = dayInfo.day.maxtemp_c + "˚C";
+                WeatherForecastPanel.Controls.Add(dailyForecastUI);
+            }
+           
+        }    
     }
 
 }

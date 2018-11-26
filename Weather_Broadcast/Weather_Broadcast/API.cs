@@ -7,34 +7,20 @@ namespace Weather_Broadcast
 {
     public class API
     {
-        private string selectedCity;
+        public static string SelectedCity { get; private set; }
         private static dynamic DataResponseFromAPI { get; set; }
         private static dynamic CurrentWeatherInfo { get; set; }     
         private static dynamic ForecastWeatherInfo { get; set; }
-        public bool IsDataFullLoaded { get; } = false;
+        public static MainWeatherForm MainWeatherForm { get; private set; }
 
         public API( string city)
         {
-            selectedCity = city;
-
-            //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            FetchWeatherDataFromAPI(selectedCity, Constant.NUMBER_OF_WEATHER_FORECAST_DAYS);
-
-            //if (DataResponseFromAPI != null)
-            //{
-            //    CurrentWeatherInfo = DataResponseFromAPI.current;
-            //    ForecastWeatherInfo = DataResponseFromAPI.forecast.forecastday;
-
-            //    if (CurrentWeatherInfo != null || ForecastWeatherInfo != null)
-            //    {
-            //        IsDataFullLoaded = true;
-            //    }
-            //}
+            SelectedCity = city;          
         }
 
-        private async static void FetchWeatherDataFromAPI(string city, int numberOfDays)
+        public async static void FetchWeatherDataFromAPI()
         {
-            var url = Constant.FETCH_WEATHER_URL + Constant.API_KEY + "+&q=" + city + "&days=" + numberOfDays;
+            var url = Constant.FETCH_WEATHER_URL + Constant.API_KEY + "+&q=" + SelectedCity + "&days=" + Constant.NUMBER_OF_WEATHER_FORECAST_DAYS;
 
             //fetch the result from api.
             using (HttpClient client = new HttpClient())
@@ -46,9 +32,11 @@ namespace Weather_Broadcast
                 //assign the json data, parsed
                 DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
 
-                // Passing the response from api to Weather main form
-                MainWeatherForm mainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
-                mainWeatherForm.Show();
+                if (DataResponseFromAPI != null)
+                {
+                    MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
+                    MainWeatherForm.Show();
+                }          
             }
         }      
     }

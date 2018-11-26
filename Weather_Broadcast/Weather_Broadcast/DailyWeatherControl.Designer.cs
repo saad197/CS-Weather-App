@@ -52,11 +52,10 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(119, 122);
+            this.DateLabel.Location = new System.Drawing.Point(109, 116);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(87, 33);
+            this.DateLabel.Size = new System.Drawing.Size(0, 33);
             this.DateLabel.TabIndex = 1;
-            this.DateLabel.Text = "11/11";
             // 
             // WeatherDescriptionLabel
             // 
@@ -110,6 +109,7 @@
             this.Margin = new System.Windows.Forms.Padding(25);
             this.Name = "DailyWeatherControl";
             this.Size = new System.Drawing.Size(342, 418);
+           
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIconPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

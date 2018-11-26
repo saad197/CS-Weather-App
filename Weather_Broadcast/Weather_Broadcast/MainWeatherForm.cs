@@ -12,12 +12,14 @@ namespace Weather_Broadcast
 {
     public partial class MainWeatherForm : Form
     {
-        Weather weather;
+        private Weather weather;
 
         public MainWeatherForm(dynamic WeatherResponse)
         {
             InitializeComponent();
-            weather = new Weather(WeatherResponse, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon);
+            weather = new Weather(WeatherResponse, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
+            weather.DisplayCurrentWeather();
+            weather.DisplayWeatherForecast();
         }
     }
 }

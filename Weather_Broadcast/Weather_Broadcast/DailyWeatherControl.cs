@@ -12,21 +12,23 @@ namespace Weather_Broadcast
 {
     public partial class DailyWeatherControl : UserControl
     {
-        public string WeekDayTitle
-        {
-            get { return WeekDayLabel.Text; }
-            set
-            {
-                WeekDayLabel.Text = value.ToString();
-            }
-        }
-
+        
         public string Date
         {
             get { return DateLabel.Text; }
             set
-            {
-                DateLabel.Text = value.ToString();
+            {             
+                DateLabel.Text = value.ToString(); 
+                
+                // Parse the Dayofweek from the date retireved from API response
+                // then set it to the DayOfWeek Label
+                var dateTokens = value.Split('-');
+                int year = int.Parse(dateTokens[0]);
+                int month = int.Parse(dateTokens[1]);
+                int day = int.Parse(dateTokens[2]);            
+                DateTime dateValue = new DateTime(year, month, day);
+                DayOfWeek dayOfWeek = dateValue.DayOfWeek;
+                WeekDayLabel.Text = dayOfWeek.ToString();
             }
         }
 
@@ -34,17 +36,16 @@ namespace Weather_Broadcast
         {
             get { return WeatherDescriptionLabel.Text; }
             set
-            {
+            {               
                 WeatherDescriptionLabel.Text = value.ToString();
             }
         }
 
         public string WeatherIcon
-        {
-            get { return WeatherIconPictureBox.ImageLocation; }
+        {           
             set
-            {
-                //WeatherIconPictureBox.Image = Image.FromFile("../images/" + value.ToString());
+            {   
+                WeatherIconPictureBox.Load(@"http:" + value);
             }
         }
 
@@ -60,6 +61,6 @@ namespace Weather_Broadcast
         public DailyWeatherControl()
         {
             InitializeComponent();
-        }        
+        }    
     }
 }
