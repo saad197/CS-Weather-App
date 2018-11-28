@@ -32,8 +32,8 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbCityList = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.selectCityTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBgImageWelcomePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             // 
             this.picBoxBgImageWelcomePage.Image = global::Weather_Broadcast.Properties.Resources.kumiko_shimizu_731627_unsplash;
             this.picBoxBgImageWelcomePage.Location = new System.Drawing.Point(16, 8);
-            this.picBoxBgImageWelcomePage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxBgImageWelcomePage.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxBgImageWelcomePage.Name = "picBoxBgImageWelcomePage";
             this.picBoxBgImageWelcomePage.Size = new System.Drawing.Size(805, 550);
             this.picBoxBgImageWelcomePage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -52,7 +52,7 @@
             // logo
             // 
             this.logo.Location = new System.Drawing.Point(332, 47);
-            this.logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logo.Margin = new System.Windows.Forms.Padding(2);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(145, 114);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -82,21 +82,10 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Choose your City";
             // 
-            // cbCityList
-            // 
-            this.cbCityList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCityList.FormattingEnabled = true;
-            this.cbCityList.ItemHeight = 16;
-            this.cbCityList.Location = new System.Drawing.Point(332, 367);
-            this.cbCityList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbCityList.Name = "cbCityList";
-            this.cbCityList.Size = new System.Drawing.Size(135, 24);
-            this.cbCityList.TabIndex = 4;
-            // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(314, 449);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(163, 43);
             this.btnConfirm.TabIndex = 5;
@@ -104,18 +93,25 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // selectCityTextBox
+            // 
+            this.selectCityTextBox.Location = new System.Drawing.Point(319, 374);
+            this.selectCityTextBox.Name = "selectCityTextBox";
+            this.selectCityTextBox.Size = new System.Drawing.Size(150, 22);
+            this.selectCityTextBox.TabIndex = 6;
+            // 
             // WeatherBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 582);
+            this.Controls.Add(this.selectCityTextBox);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.cbCityList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.picBoxBgImageWelcomePage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WeatherBoard";
             this.Text = "Weather Broadcast";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBgImageWelcomePage)).EndInit();
@@ -131,8 +127,8 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbCityList;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.TextBox selectCityTextBox;
     }
 }
 

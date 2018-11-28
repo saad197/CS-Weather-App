@@ -41,13 +41,13 @@ namespace Weather_Broadcast
                 cityNames.Add(city.Name);
             }
 
-            cbCityList.DataSource = cityNames;
+            //cbCityList.DataSource = cityNames;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             // get current selected city obj 
-            string currentSelectedCityName = cbCityList.Text;
+            string currentSelectedCityName = selectCityTextBox.Text;
 
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName);

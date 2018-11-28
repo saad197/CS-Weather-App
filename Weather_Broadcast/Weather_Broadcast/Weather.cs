@@ -14,12 +14,11 @@ namespace Weather_Broadcast
         public dynamic WeatherResponseFromAPI { get; private set; }
         public FlowLayoutPanel WeatherForecastPanel { get; private set; }
 
-
         public DailyDetailsControl DTC { get; private set; }
 
 
         public Weather(dynamic dataResponse, DailyDetailsControl dailyDetailControl, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon,
-                       FlowLayoutPanel weatherForecastPanel)
+                       FlowLayoutPanel weatherForecastPanel )
         {
             // init weather data
             WeatherResponseFromAPI = dataResponse;
@@ -33,7 +32,12 @@ namespace Weather_Broadcast
             PictureBoxIcon = weatherIcon;
             WeatherForecastPanel = weatherForecastPanel;
         }
-        
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("test");
+        }
+
         public void DisplayCurrentWeather()
         {
             DisplayWeather();
