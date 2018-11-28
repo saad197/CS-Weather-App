@@ -15,7 +15,10 @@ namespace Weather_Broadcast
         public FlowLayoutPanel WeatherForecastPanel { get; private set; }
 
 
-        public Weather(dynamic dataResponse, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon,
+        public DailyDetailsControl DTC { get; private set; }
+
+
+        public Weather(dynamic dataResponse, DailyDetailsControl dailyDetailControl, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon,
                        FlowLayoutPanel weatherForecastPanel)
         {
             // init weather data
@@ -24,6 +27,7 @@ namespace Weather_Broadcast
             // Init view control reference
             LabelCityName = labelCityName;
             LabelCurrentDate = labelDate;
+            DTC = dailyDetailControl;
             LabelCurrentTemperature = labelCurrentTemp;
             LabelDescription = labelDescription;
             PictureBoxIcon = weatherIcon;
@@ -40,7 +44,8 @@ namespace Weather_Broadcast
             DisplayRainChance();
             DisplayDayNight();
             DisplayWindSpeed();
-            DisplayIcon();          
+            DisplayIcon();
+            SetCurrentConditionData();
         }
 
         private void DisplayWeather()
@@ -51,6 +56,19 @@ namespace Weather_Broadcast
         private void DisplayTemp()
         {
             LabelCurrentTemperature.Text = WeatherResponseFromAPI.current.temp_c + " ˚C";
+        }
+
+        public void SetCurrentConditionData()
+        {
+            DTC.HumidityValue = WeatherResponseFromAPI.current.humidity + "%";
+            DTC.SunRiseTimeValue = WeatherResponseFromAPI.forecast.forecastday[0].astro.sunrise;
+            DTC.SunSetTimeValue = WeatherResponseFromAPI.forecast.forecastday[0].astro.sunset;
+            DTC.MoonRiseTimeValue = WeatherResponseFromAPI.forecast.forecastday[0].astro.moonrise;
+            DTC.MoonSetTimeValue = WeatherResponseFromAPI.forecast.forecastday[0].astro.moonset;
+            DTC.MoonSetTimeValue = WeatherResponseFromAPI.forecast.forecastday[0].astro.moonset;
+            DTC.UVValue = WeatherResponseFromAPI.current.uv;
+            DTC.WindValue = WeatherResponseFromAPI.current.wind_kph;
+            DTC.PrecipitationValue = WeatherResponseFromAPI.current.precip_mm;
         }
 
         private void DisplayCurrentDate()
@@ -91,8 +109,8 @@ namespace Weather_Broadcast
 
         public void DisplayWeatherForecast()
         {
-            var weatherForecastDaysInfo = WeatherResponseFromAPI.forecast.forecastday;          
-
+            var weatherForecastDaysInfo = WeatherResponseFromAPI.forecast.forecastday;
+         
             foreach (var dayInfo in weatherForecastDaysInfo)
             {             
                 DailyWeatherControl dailyForecastUI = new DailyWeatherControl();

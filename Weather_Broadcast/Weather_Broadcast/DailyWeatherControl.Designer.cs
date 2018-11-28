@@ -42,9 +42,10 @@
             // 
             this.WeekDayLabel.AutoSize = true;
             this.WeekDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeekDayLabel.Location = new System.Drawing.Point(103, 36);
+            this.WeekDayLabel.Location = new System.Drawing.Point(52, 19);
+            this.WeekDayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeekDayLabel.Name = "WeekDayLabel";
-            this.WeekDayLabel.Size = new System.Drawing.Size(134, 31);
+            this.WeekDayLabel.Size = new System.Drawing.Size(71, 17);
             this.WeekDayLabel.TabIndex = 0;
             this.WeekDayLabel.Text = "SUNDAY";
             // 
@@ -52,26 +53,29 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(109, 116);
+            this.DateLabel.Location = new System.Drawing.Point(54, 60);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(0, 33);
+            this.DateLabel.Size = new System.Drawing.Size(0, 18);
             this.DateLabel.TabIndex = 1;
             // 
             // WeatherDescriptionLabel
             // 
             this.WeatherDescriptionLabel.AutoSize = true;
             this.WeatherDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeatherDescriptionLabel.Location = new System.Drawing.Point(13, 175);
+            this.WeatherDescriptionLabel.Location = new System.Drawing.Point(6, 91);
+            this.WeatherDescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeatherDescriptionLabel.Name = "WeatherDescriptionLabel";
-            this.WeatherDescriptionLabel.Size = new System.Drawing.Size(325, 33);
+            this.WeatherDescriptionLabel.Size = new System.Drawing.Size(165, 18);
             this.WeatherDescriptionLabel.TabIndex = 2;
             this.WeatherDescriptionLabel.Text = "A mix of sun and clouds";
             // 
             // WeatherIconPictureBox
             // 
-            this.WeatherIconPictureBox.Location = new System.Drawing.Point(99, 222);
+            this.WeatherIconPictureBox.Location = new System.Drawing.Point(50, 115);
+            this.WeatherIconPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.WeatherIconPictureBox.Name = "WeatherIconPictureBox";
-            this.WeatherIconPictureBox.Size = new System.Drawing.Size(129, 98);
+            this.WeatherIconPictureBox.Size = new System.Drawing.Size(64, 51);
             this.WeatherIconPictureBox.TabIndex = 3;
             this.WeatherIconPictureBox.TabStop = false;
             // 
@@ -79,9 +83,10 @@
             // 
             this.TempDailyBoxLabel.AutoSize = true;
             this.TempDailyBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempDailyBoxLabel.Location = new System.Drawing.Point(78, 343);
+            this.TempDailyBoxLabel.Location = new System.Drawing.Point(39, 178);
+            this.TempDailyBoxLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TempDailyBoxLabel.Name = "TempDailyBoxLabel";
-            this.TempDailyBoxLabel.Size = new System.Drawing.Size(176, 61);
+            this.TempDailyBoxLabel.Size = new System.Drawing.Size(94, 31);
             this.TempDailyBoxLabel.TabIndex = 4;
             this.TempDailyBoxLabel.Text = "12 º C";
             // 
@@ -90,14 +95,15 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.WeekDayLabel);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(-8, -7);
+            this.panel1.Location = new System.Drawing.Point(-4, -4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 109);
+            this.panel1.Size = new System.Drawing.Size(180, 57);
             this.panel1.TabIndex = 5;
             // 
             // DailyWeatherControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -106,10 +112,10 @@
             this.Controls.Add(this.WeatherIconPictureBox);
             this.Controls.Add(this.WeatherDescriptionLabel);
             this.Controls.Add(this.DateLabel);
-            this.Margin = new System.Windows.Forms.Padding(25);
+            this.Margin = new System.Windows.Forms.Padding(12, 13, 12, 13);
             this.Name = "DailyWeatherControl";
-            this.Size = new System.Drawing.Size(342, 418);
-           
+            this.Size = new System.Drawing.Size(171, 217);
+            this.Load += new System.EventHandler(this.DailyWeatherControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIconPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

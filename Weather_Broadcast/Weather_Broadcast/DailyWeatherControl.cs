@@ -18,8 +18,8 @@ namespace Weather_Broadcast
             get { return DateLabel.Text; }
             set
             {             
-                DateLabel.Text = value.ToString(); 
-                
+                DateLabel.Text = value.ToString();
+
                 // Parse the Dayofweek from the date retireved from API response
                 // then set it to the DayOfWeek Label
                 var dateTokens = value.Split('-');
@@ -61,6 +61,11 @@ namespace Weather_Broadcast
         public DailyWeatherControl()
         {
             InitializeComponent();
-        }    
+        }
+
+        private void DailyWeatherControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

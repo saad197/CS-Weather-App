@@ -17,9 +17,10 @@ namespace Weather_Broadcast
         public MainWeatherForm(dynamic WeatherResponse)
         {
             InitializeComponent();
-            weather = new Weather(WeatherResponse, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
+            weather = new Weather(WeatherResponse, dailyDetailsControl1, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
             weather.DisplayCurrentWeather();
             weather.DisplayWeatherForecast();
+           
         }
     }
 }
