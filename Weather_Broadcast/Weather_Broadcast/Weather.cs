@@ -33,11 +33,7 @@ namespace Weather_Broadcast
             WeatherForecastPanel = weatherForecastPanel;
         }
 
-        private void Refresh_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("test");
-        }
-
+       
         public void DisplayCurrentWeather()
         {
             DisplayWeather();

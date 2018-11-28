@@ -14,24 +14,30 @@ namespace Weather_Broadcast
     {
         private Weather weather;
 
+        public string CurrentCityName { get; private set; }
+        
+
         public MainWeatherForm(dynamic WeatherResponse)
         {
             InitializeComponent();
+            CurrentCityName = WeatherResponse.location.name.ToString();
             weather = new Weather(WeatherResponse, dailyDetailsControl1, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
             weather.DisplayCurrentWeather();
-            weather.DisplayWeatherForecast();  
+            weather.DisplayWeatherForecast();
         }
 
         private void Refresh_Click(object sender, EventArgs e)
         {
             // get current selected city obj 
-            string currentSelectedCityName = textBox1selectNewCityTextBox.Text;
+            string currentSelectedCityName = CurrentCityName;
 
-            this.Close();
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
             API.FetchWeatherDataFromAPI();
+
+            this.Close();
+            
         }
     }
 }

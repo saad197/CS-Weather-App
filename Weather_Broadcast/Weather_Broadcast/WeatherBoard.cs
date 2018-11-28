@@ -11,37 +11,10 @@ using System.Windows.Forms;
 namespace Weather_Broadcast
 {
     public partial class WeatherBoard : Form
-    {
-        List<City> cityList;
-        
+    {      
         public WeatherBoard()
         {
             InitializeComponent();
-            FillListCityData();
-            FillCityNamesToCityComboBox();          
-        }
-
-        private void FillListCityData()
-        {
-            cityList = new List<City>();
-
-            foreach (var pair in Constant.MapOfCityNameAndID)
-            {
-                City city = new City(pair.Key);
-                cityList.Add(city);
-            }
-        }
-
-        private void FillCityNamesToCityComboBox()
-        {
-            List<string> cityNames = new List<string>();
-
-            foreach (var city in cityList)
-            {
-                cityNames.Add(city.Name);
-            }
-
-            //cbCityList.DataSource = cityNames;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -52,7 +25,7 @@ namespace Weather_Broadcast
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            API.FetchWeatherDataFromAPI();
+            API.FetchWeatherDataFromAPI();        
         }
     }
 }
