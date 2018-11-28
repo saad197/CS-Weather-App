@@ -27,6 +27,7 @@ namespace Weather_Broadcast
             // get current selected city obj 
             string currentSelectedCityName = textBox1selectNewCityTextBox.Text;
 
+            this.Close();
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field

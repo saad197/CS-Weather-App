@@ -120,6 +120,7 @@
             this.labelDate.TabIndex = 21;
             this.labelDate.Text = "Date";
             this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+          
             // 
             // weatherForecastPanel
             // 
@@ -143,7 +144,7 @@
             this.dailyDetailsControl1.SunSetTimeValue = "Time";
             this.dailyDetailsControl1.TabIndex = 23;
             this.dailyDetailsControl1.UVValue = "0";
-            this.dailyDetailsControl1.WindValue = "0km/h KM/H KM/H KM/H KM/H";
+            this.dailyDetailsControl1.WindValue = "0km/h KM/H KM/H KM/H KM/H KM/H";
             // 
             // textBox1selectNewCityTextBox
             // 
@@ -156,6 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1491, 1055);
             this.Controls.Add(this.textBox1selectNewCityTextBox);
