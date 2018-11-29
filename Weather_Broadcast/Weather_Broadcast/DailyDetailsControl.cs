@@ -37,10 +37,10 @@ namespace Weather_Broadcast
 
         public string MoonRiseTimeValue
         {
-            get { return SunRise.Text; }
+            get { return MoonRise.Text; }
             set
             {
-                SunRise.Text = value.ToString();
+                MoonRise.Text = value.ToString();
             }
         }
 
@@ -49,7 +49,7 @@ namespace Weather_Broadcast
             get { return MoonSet.Text; }
             set
             {
-                MoonRise.Text = value.ToString();
+                MoonSet.Text = value.ToString();
             }
         }
 
