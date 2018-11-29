@@ -1,0 +1,12 @@
+sun rise - https://www.flaticon.com/free-icon/sunrise_136741
+sun set - https://www.flaticon.com/free-icon/sunset_136742
+humidity - https://www.flaticon.com/free-icon/humidity_1113760#term=humidity&page=1&position=23
+precipitation - https://www.flaticon.com/free-icon/precipitation_137428#term=precipitation&page=1&position=1
+wind - https://www.flaticon.com/free-icon/wind_134118#term=wind&page=3&position=3
+uv - https://www.flaticon.com/free-icon/filter-uv_85440#term=uv&page=1&position=4
+pin - https://www.flaticon.com/free-icon/pin_149059#term=location&page=1&position=20
+
+https://www.flaticon.com/authors/photo3idea-studio -humid
+https://www.flaticon.com/authors/smashicons-sun,precipitation, pin
+https://www.flaticon.com/authors/epiccoders -wind
+https://www.flaticon.com/authors/freepik -uv
