@@ -73,7 +73,7 @@
             // WeatherIconPictureBox
             // 
             this.WeatherIconPictureBox.Location = new System.Drawing.Point(50, 115);
-            this.WeatherIconPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeatherIconPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeatherIconPictureBox.Name = "WeatherIconPictureBox";
             this.WeatherIconPictureBox.Size = new System.Drawing.Size(64, 51);
             this.WeatherIconPictureBox.TabIndex = 3;
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.WeekDayLabel);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-4, -4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 57);
             this.panel1.TabIndex = 5;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TempDailyBoxLabel);
