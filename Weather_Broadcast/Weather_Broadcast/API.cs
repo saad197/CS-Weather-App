@@ -18,7 +18,7 @@ namespace Weather_Broadcast
             SelectedCity = city;          
         }
 
-        public async static void FetchWeatherDataFromAPI()
+        public async static void FetchWeatherDataFromAPI(bool widget)
         {
             var url = Constant.FETCH_WEATHER_URL + Constant.API_KEY + "+&q=" + SelectedCity + "&days=" + Constant.NUMBER_OF_WEATHER_FORECAST_DAYS;
 
@@ -34,8 +34,16 @@ namespace Weather_Broadcast
 
                 if (DataResponseFromAPI != null)
                 {
-                    MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
-                    MainWeatherForm.Show();
+                    if (widget)
+                    {
+                       Widget Widget = new Widget(DataResponseFromAPI);
+                       Widget.Show();
+                    }
+                    else
+                    {
+                        MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
+                        MainWeatherForm.Show();
+                    }
                 }          
             }
         }      
