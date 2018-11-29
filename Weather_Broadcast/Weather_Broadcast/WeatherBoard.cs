@@ -13,12 +13,18 @@ namespace Weather_Broadcast
     public partial class WeatherBoard : Form
     {
         List<City> cityList;
-        
+
+
+        //form movement variables
+        private bool isDragging = false;
+        private Point newPoint = new Point(0, 0);
+
         public WeatherBoard()
         {
             InitializeComponent();
             FillListCityData();
-            FillCityNamesToCityComboBox();          
+            FillCityNamesToCityComboBox();
+
         }
 
         private void FillListCityData()
@@ -53,6 +59,45 @@ namespace Weather_Broadcast
             API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
             API.FetchWeatherDataFromAPI();
+        }
+
+        private void WeatherBoard_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        //moves window around based on mouse movement
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - newPoint.X, p.Y - newPoint.Y);
+            }
+        }
+
+        //when mouse is down on panel
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;  
+            newPoint = new Point(e.X, e.Y);
+
+        }
+
+        //when user lets go of mouse
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        //minimize
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
