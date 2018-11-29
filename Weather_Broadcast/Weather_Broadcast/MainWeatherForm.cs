@@ -14,24 +14,63 @@ namespace Weather_Broadcast
     {
         private Weather weather;
 
+        //form movement variables
+        private bool isDragging = false;
+        private Point newPoint = new Point(0, 0);
+
         public MainWeatherForm(dynamic WeatherResponse)
         {
             InitializeComponent();
-            weather = new Weather(WeatherResponse, dailyDetailsControl1, labelMainCity, labelDate, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
+            weather = new Weather(WeatherResponse, dailyDetailsControl1, cityLabel, dateLabel, labelMainCurrentTemp, labelMainCurrentDescription, pbMainCurrentIcon, weatherForecastPanel);
             weather.DisplayCurrentWeather();
-            weather.DisplayWeatherForecast();  
+            weather.DisplayWeatherForecast();
         }
 
         private void Refresh_Click(object sender, EventArgs e)
         {
             // get current selected city obj 
-            string currentSelectedCityName = textBox1selectNewCityTextBox.Text;
+          //  string currentSelectedCityName = textBox1selectNewCityTextBox.Text;
 
             this.Close();
             // pass it to API 
-            API apiWeather = new API(currentSelectedCityName);
+        //    API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            API.FetchWeatherDataFromAPI();
+           // API.FetchWeatherDataFromAPI();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - newPoint.X, p.Y - newPoint.Y);
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            newPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
