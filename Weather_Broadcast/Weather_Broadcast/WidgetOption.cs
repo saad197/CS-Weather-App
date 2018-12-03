@@ -41,5 +41,13 @@ namespace Weather_Broadcast
             selectCity.AutoCompleteSource = AutoCompleteSource.CustomSource;
             selectCity.AutoCompleteCustomSource = cityColl;
         }
+
+        private void ConfirmCity(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
     }
 }

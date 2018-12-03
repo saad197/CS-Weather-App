@@ -112,5 +112,13 @@ namespace Weather_Broadcast
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void EnteringCity(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode ==  Keys.Enter)
+            {
+                btnConfirm.PerformClick();
+            }
+        }
     }
 }

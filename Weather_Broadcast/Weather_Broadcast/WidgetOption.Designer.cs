@@ -42,20 +42,21 @@
             // selectCity
             // 
             this.selectCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectCity.Location = new System.Drawing.Point(72, 104);
-            this.selectCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.selectCity.Location = new System.Drawing.Point(48, 67);
+            this.selectCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selectCity.Name = "selectCity";
-            this.selectCity.Size = new System.Drawing.Size(342, 55);
+            this.selectCity.Size = new System.Drawing.Size(229, 37);
             this.selectCity.TabIndex = 0;
+            this.selectCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConfirmCity);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(124, 175);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(83, 112);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 42);
+            this.button1.Size = new System.Drawing.Size(169, 27);
             this.button1.TabIndex = 1;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -65,10 +66,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(52, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 69);
+            this.pictureBox2.Size = new System.Drawing.Size(59, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -79,10 +79,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(136, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(91, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 55);
+            this.label2.Size = new System.Drawing.Size(214, 36);
             this.label2.TabIndex = 12;
             this.label2.Text = "Enter your city:";
             // 
@@ -92,10 +91,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(162, 250);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(108, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 29);
+            this.label3.Size = new System.Drawing.Size(143, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Weather Broadcast";
             // 
@@ -103,20 +101,19 @@
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(104, 242);
-            this.logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logo.Location = new System.Drawing.Point(69, 155);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(50, 37);
+            this.logo.Size = new System.Drawing.Size(33, 24);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 14;
             this.logo.TabStop = false;
             // 
             // WidgetOption
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(480, 317);
+            this.ClientSize = new System.Drawing.Size(320, 203);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.pictureBox2);
@@ -124,7 +121,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.selectCity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WidgetOption";
             this.Text = "New Weather Widget";
             this.Load += new System.EventHandler(this.WidgetOption_Load);
