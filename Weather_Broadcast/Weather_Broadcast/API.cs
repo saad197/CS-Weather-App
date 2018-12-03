@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Linq;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -12,10 +13,18 @@ namespace Weather_Broadcast
         private static dynamic CurrentWeatherInfo { get; set; }     
         private static dynamic ForecastWeatherInfo { get; set; }
         public static MainWeatherForm MainWeatherForm { get; private set; }
-
-        public API( string city)
+        public static WeatherBoard WeatherBoardForm { get; set; }
+        
+       
+        public API(string city)
         {
-            SelectedCity = city;          
+            SelectedCity = city;
+        }
+
+        public API(string city, WeatherBoard weatherBoard)
+        {
+            SelectedCity = city;
+            WeatherBoardForm = weatherBoard;
         }
 
         public async static void FetchWeatherDataFromAPI(bool widget)
@@ -34,6 +43,8 @@ namespace Weather_Broadcast
                     //assign the json data, parsed
                     DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
 
+                    WeatherBoard.LabelSpinner.Visible = false;
+
                     if (DataResponseFromAPI != null)
                     {
                         if (widget)
@@ -45,6 +56,7 @@ namespace Weather_Broadcast
                         {
                             MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
                             MainWeatherForm.Show();
+                            WeatherBoardForm.Hide();
                         }
                     }
                 }
@@ -54,6 +66,7 @@ namespace Weather_Broadcast
                 MessageBox.Show("Invalid city name. Try again!!!");
             }
             
-        }      
+        }
+        
     }
 }

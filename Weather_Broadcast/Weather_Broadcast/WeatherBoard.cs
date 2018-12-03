@@ -14,6 +14,7 @@ namespace Weather_Broadcast
     {
         List<City> cityList;
 
+        public static Label LabelSpinner { get; set; }
 
         //form movement variables
         private bool isDragging = false;
@@ -24,7 +25,7 @@ namespace Weather_Broadcast
             InitializeComponent();
             FillListCityData();
             FillCityNamesToCityComboBox();
-
+            LabelSpinner = labelSpinner;
         }
 
         private void FillListCityData()
@@ -52,18 +53,22 @@ namespace Weather_Broadcast
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            LabelSpinner.Visible = true;            
             // get current selected city obj 
             string currentSelectedCityName = selectCityTextBox.Text;
 
             // pass it to API 
-            API apiWeather = new API(currentSelectedCityName);
+            API apiWeather = new API(currentSelectedCityName,  this);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
             API.FetchWeatherDataFromAPI(false);
             selectCityTextBox.Text = "";
+           
         }
 
         private void WeatherBoard_Load(object sender, EventArgs e)
         {
+            labelSpinner.Visible = false;
+
             AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
 
             string[] listCityNames = Helper.GetListOfCityNames();
