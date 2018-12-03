@@ -201,7 +201,7 @@
             this.DayDetail.AutoSize = true;
             this.DayDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DayDetail.ForeColor = System.Drawing.Color.White;
-            this.DayDetail.Location = new System.Drawing.Point(447, 11);
+            this.DayDetail.Location = new System.Drawing.Point(459, 11);
             this.DayDetail.Name = "DayDetail";
             this.DayDetail.Size = new System.Drawing.Size(167, 39);
             this.DayDetail.TabIndex = 20;

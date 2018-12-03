@@ -55,7 +55,7 @@ namespace Weather_Broadcast
 
         private void DisplayWeather()
         {
-            LabelCityName.Text = WeatherResponseFromAPI.location.name + " , " + WeatherResponseFromAPI.location.country;
+            LabelCityName.Text = WeatherResponseFromAPI.location.name + ", " + WeatherResponseFromAPI.location.country;
         }
 
         private void DisplayTemp()

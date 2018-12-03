@@ -78,5 +78,10 @@ namespace Weather_Broadcast
             WidgetOption newWidget = new WidgetOption();
             newWidget.Show();
         }
+
+        private void MainWeatherForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
