@@ -15,7 +15,6 @@ namespace Weather_Broadcast
         //form movement variables
         private bool isDragging = false;
         private Point newPoint = new Point(0, 0);
-        static dynamic response;
 
         //used for refreshing
         public WeatherWidget Reload = new WeatherWidget();
