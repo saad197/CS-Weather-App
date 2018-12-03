@@ -124,9 +124,7 @@ namespace Weather_Broadcast
                 dailyForecastUI.WeatherIcon = dayInfo.day.condition.icon.ToString();
                 dailyForecastUI.TempC = dayInfo.day.maxtemp_c + "˚C";
                 WeatherForecastPanel.Controls.Add(dailyForecastUI);
-            }
-           
+            }        
         }    
     }
-
 }
