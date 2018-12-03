@@ -24,5 +24,22 @@ namespace Weather_Broadcast
             API.FetchWeatherDataFromAPI(true);
             this.Close();
         }
+
+        private void WidgetOption_Load(object sender, EventArgs e)
+        {
+            //selectCity
+            AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
+
+            string[] listCityNames = Helper.GetListOfCityNames();
+
+            foreach (var cityname in listCityNames)
+            {
+                cityColl.Add(cityname);
+            }
+
+            selectCity.AutoCompleteMode = AutoCompleteMode.Suggest;
+            selectCity.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            selectCity.AutoCompleteCustomSource = cityColl;
+        }
     }
 }
