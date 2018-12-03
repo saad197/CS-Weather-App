@@ -3,13 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Weather_Broadcast
 {
     public static class Helper
     {
 
-        public static string[] ListOfCityNames = new string[] {"Airdrie", "Brooks", "Calgary", "Camrose", "Banff", "Edmonton", "Jasper",};
+        public static string  PATH_CITY_NAMES = @"../../Resources/citynames.txt";
+
+        public static string[] GetListOfCityNames()
+        {
+            List<string> cityNames = new List<string>();
+
+            using (StreamReader sr = new StreamReader(PATH_CITY_NAMES))
+            {
+                var data = sr.ReadLine();
+                while (data != null)
+                {
+                    cityNames.Add(data);
+                    data = sr.ReadLine();
+                }
+            }
+            return cityNames.ToArray();
+        }
 
         public static string ConvertFahrenheitToCelsius(double fahrenheitTemp)
         {

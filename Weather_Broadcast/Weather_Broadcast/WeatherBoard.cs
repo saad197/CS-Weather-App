@@ -65,7 +65,9 @@ namespace Weather_Broadcast
         {
             AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
 
-            foreach (var cityname in Helper.ListOfCityNames)
+            string[] listCityNames = Helper.GetListOfCityNames();
+
+            foreach (var cityname in listCityNames)
             {
                 cityColl.Add(cityname);
             }
