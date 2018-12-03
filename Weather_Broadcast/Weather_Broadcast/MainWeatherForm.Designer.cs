@@ -47,8 +47,8 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.cityLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateLabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.dateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,10 +59,10 @@
             // pbMainCurrentIcon
             // 
             this.pbMainCurrentIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pbMainCurrentIcon.Location = new System.Drawing.Point(492, 73);
-            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbMainCurrentIcon.Location = new System.Drawing.Point(656, 90);
+            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pbMainCurrentIcon.Name = "pbMainCurrentIcon";
-            this.pbMainCurrentIcon.Size = new System.Drawing.Size(152, 141);
+            this.pbMainCurrentIcon.Size = new System.Drawing.Size(203, 174);
             this.pbMainCurrentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMainCurrentIcon.TabIndex = 0;
             this.pbMainCurrentIcon.TabStop = false;
@@ -73,10 +73,10 @@
             this.labelMainCurrentTemp.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCurrentTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCurrentTemp.ForeColor = System.Drawing.Color.White;
-            this.labelMainCurrentTemp.Location = new System.Drawing.Point(652, 101);
-            this.labelMainCurrentTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMainCurrentTemp.Location = new System.Drawing.Point(869, 124);
+            this.labelMainCurrentTemp.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMainCurrentTemp.Name = "labelMainCurrentTemp";
-            this.labelMainCurrentTemp.Size = new System.Drawing.Size(94, 33);
+            this.labelMainCurrentTemp.Size = new System.Drawing.Size(117, 42);
             this.labelMainCurrentTemp.TabIndex = 1;
             this.labelMainCurrentTemp.Text = "Temp";
             // 
@@ -86,10 +86,10 @@
             this.labelMainCurrentDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCurrentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCurrentDescription.ForeColor = System.Drawing.Color.White;
-            this.labelMainCurrentDescription.Location = new System.Drawing.Point(652, 134);
-            this.labelMainCurrentDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMainCurrentDescription.Location = new System.Drawing.Point(869, 165);
+            this.labelMainCurrentDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMainCurrentDescription.Name = "labelMainCurrentDescription";
-            this.labelMainCurrentDescription.Size = new System.Drawing.Size(173, 33);
+            this.labelMainCurrentDescription.Size = new System.Drawing.Size(216, 42);
             this.labelMainCurrentDescription.TabIndex = 2;
             this.labelMainCurrentDescription.Text = "Description";
             // 
@@ -99,10 +99,10 @@
             this.labelMainCity.BackColor = System.Drawing.Color.Transparent;
             this.labelMainCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainCity.ForeColor = System.Drawing.Color.White;
-            this.labelMainCity.Location = new System.Drawing.Point(99, -95);
-            this.labelMainCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMainCity.Location = new System.Drawing.Point(132, -117);
+            this.labelMainCity.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMainCity.Name = "labelMainCity";
-            this.labelMainCity.Size = new System.Drawing.Size(70, 33);
+            this.labelMainCity.Size = new System.Drawing.Size(86, 42);
             this.labelMainCity.TabIndex = 3;
             this.labelMainCity.Text = "City";
             this.labelMainCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,43 +112,42 @@
             this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Refresh.Location = new System.Drawing.Point(609, -91);
-            this.Refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Refresh.Location = new System.Drawing.Point(812, -112);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(86, 52);
+            this.Refresh.Size = new System.Drawing.Size(115, 64);
             this.Refresh.TabIndex = 6;
             this.Refresh.Text = "⟳";
             this.Refresh.UseVisualStyleBackColor = true;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
-       
             // weatherForecastPanel
             // 
             this.weatherForecastPanel.BackColor = System.Drawing.Color.Transparent;
-            this.weatherForecastPanel.Location = new System.Drawing.Point(105, 260);
-            this.weatherForecastPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.weatherForecastPanel.Location = new System.Drawing.Point(140, 320);
+            this.weatherForecastPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weatherForecastPanel.Name = "weatherForecastPanel";
-            this.weatherForecastPanel.Size = new System.Drawing.Size(1087, 263);
+            this.weatherForecastPanel.Size = new System.Drawing.Size(1449, 324);
             this.weatherForecastPanel.TabIndex = 22;
             // 
             // dailyDetailsControl1
             // 
             this.dailyDetailsControl1.BackColor = System.Drawing.Color.Transparent;
             this.dailyDetailsControl1.HumidityValue = "0%";
-            this.dailyDetailsControl1.Location = new System.Drawing.Point(76, 543);
-            this.dailyDetailsControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.dailyDetailsControl1.Location = new System.Drawing.Point(101, 668);
+            this.dailyDetailsControl1.Margin = new System.Windows.Forms.Padding(5);
             this.dailyDetailsControl1.MoonRiseTimeValue = "Time";
             this.dailyDetailsControl1.MoonSetTimeValue = "Time";
             this.dailyDetailsControl1.Name = "dailyDetailsControl1";
             this.dailyDetailsControl1.PrecipitationValue = "0%";
-            this.dailyDetailsControl1.Size = new System.Drawing.Size(1097, 330);
+            this.dailyDetailsControl1.Size = new System.Drawing.Size(1463, 406);
             this.dailyDetailsControl1.SunRiseTimeValue = "Time";
             this.dailyDetailsControl1.SunSetTimeValue = "Time";
             this.dailyDetailsControl1.TabIndex = 23;
             this.dailyDetailsControl1.UVValue = "0";
             this.dailyDetailsControl1.WindValue = "0km/h KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H " +
     "KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H KM/H " +
-    "KM/H KM/H KM/H KM/H";
+    "KM/H KM/H KM/H KM/H KM/H KM/H KM/H";
             // 
             // panel1
             // 
@@ -160,8 +159,9 @@
             this.panel1.Controls.Add(this.logo);
             this.panel1.Controls.Add(this.cityLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 37);
+            this.panel1.Size = new System.Drawing.Size(1607, 46);
             this.panel1.TabIndex = 24;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -173,10 +173,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(1084, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Location = new System.Drawing.Point(1445, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 36);
+            this.button2.Size = new System.Drawing.Size(71, 44);
             this.button2.TabIndex = 26;
             this.button2.Text = "_";
             this.button2.UseVisualStyleBackColor = false;
@@ -186,10 +186,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(521, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(695, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -200,10 +200,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(50, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(67, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 29);
+            this.label3.Size = new System.Drawing.Size(289, 35);
             this.label3.TabIndex = 9;
             this.label3.Text = "Weather Broadcast";
             // 
@@ -213,10 +212,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1142, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(1523, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 38);
+            this.button1.Size = new System.Drawing.Size(71, 47);
             this.button1.TabIndex = 7;
             this.button1.Text = "x";
             this.button1.UseVisualStyleBackColor = false;
@@ -226,10 +225,10 @@
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(14, 0);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Location = new System.Drawing.Point(19, 0);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(32, 37);
+            this.logo.Size = new System.Drawing.Size(43, 46);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
@@ -240,10 +239,10 @@
             this.cityLabel.BackColor = System.Drawing.Color.Transparent;
             this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityLabel.ForeColor = System.Drawing.Color.White;
-            this.cityLabel.Location = new System.Drawing.Point(556, -3);
-            this.cityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cityLabel.Location = new System.Drawing.Point(741, -4);
+            this.cityLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.cityLabel.Name = "cityLabel";
-            this.cityLabel.Size = new System.Drawing.Size(82, 39);
+            this.cityLabel.Size = new System.Drawing.Size(103, 52);
             this.cityLabel.TabIndex = 25;
             this.cityLabel.Text = "City";
             // 
@@ -258,24 +257,12 @@
             this.panel2.Controls.Add(this.weatherForecastPanel);
             this.panel2.Controls.Add(this.labelMainCity);
             this.panel2.Controls.Add(this.Refresh);
-            this.panel2.Location = new System.Drawing.Point(0, 37);
+            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1184, 860);
+            this.panel2.Size = new System.Drawing.Size(1579, 1058);
             this.panel2.TabIndex = 25;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // dateLabel
-            // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.ForeColor = System.Drawing.Color.White;
-            this.dateLabel.Location = new System.Drawing.Point(65, 74);
-            this.dateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(94, 33);
-            this.dateLabel.TabIndex = 24;
-            this.dateLabel.Text = "Temp";
             // 
             // button3
             // 
@@ -283,28 +270,42 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(13, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Location = new System.Drawing.Point(1379, 8);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 36);
+            this.button3.Size = new System.Drawing.Size(195, 44);
             this.button3.TabIndex = 27;
             this.button3.Text = "Create Widget";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.ForeColor = System.Drawing.Color.White;
+            this.dateLabel.Location = new System.Drawing.Point(87, 91);
+            this.dateLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(117, 42);
+            this.dateLabel.TabIndex = 24;
+            this.dateLabel.Text = "Temp";
+            // 
             // MainWeatherForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1195, 909);
+            this.ClientSize = new System.Drawing.Size(1593, 1102);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "MainWeatherForm";
             this.Text = "Weather";

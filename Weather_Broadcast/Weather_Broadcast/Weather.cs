@@ -40,6 +40,7 @@ namespace Weather_Broadcast
 
         public void DisplayCurrentWeather()
         {
+            //MessageBox.Show(WeatherResponseFromAPI.ToString());
             DisplayWeather();
             DisplayTemp();
             DisplayCurrentDate();
@@ -53,8 +54,8 @@ namespace Weather_Broadcast
         }
 
         private void DisplayWeather()
-        {          
-            LabelCityName.Text = WeatherResponseFromAPI.location.name;
+        {
+            LabelCityName.Text = WeatherResponseFromAPI.location.name + " , " + WeatherResponseFromAPI.location.country;
         }
 
         private void DisplayTemp()
