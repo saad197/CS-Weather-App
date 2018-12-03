@@ -59,6 +59,7 @@ namespace Weather_Broadcast
             API apiWeather = new API(currentSelectedCityName);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
             API.FetchWeatherDataFromAPI(false);
+            selectCityTextBox.Text = "";
         }
 
         private void WeatherBoard_Load(object sender, EventArgs e)

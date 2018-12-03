@@ -22,30 +22,38 @@ namespace Weather_Broadcast
         {
             var url = Constant.FETCH_WEATHER_URL + Constant.API_KEY + "+&q=" + SelectedCity + "&days=" + Constant.NUMBER_OF_WEATHER_FORECAST_DAYS;
 
-            //fetch the result from api.
-            using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.GetAsync(url))
-            using (HttpContent content = response.Content)
+            try
             {
-                // ... Read the string.
-                string result = await content.ReadAsStringAsync();
-                //assign the json data, parsed
-                DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
-
-                if (DataResponseFromAPI != null)
+                //fetch the result from api.
+                using (HttpClient client = new HttpClient())
+                using (HttpResponseMessage response = await client.GetAsync(url))
+                using (HttpContent content = response.Content)
                 {
-                    if (widget)
+                    // ... Read the string.
+                    string result = await content.ReadAsStringAsync();
+                    //assign the json data, parsed
+                    DataResponseFromAPI = JsonConvert.DeserializeObject<dynamic>(result);
+
+                    if (DataResponseFromAPI != null)
                     {
-                       Widget Widget = new Widget(DataResponseFromAPI);
-                       Widget.Show();
+                        if (widget)
+                        {
+                            Widget Widget = new Widget(DataResponseFromAPI);
+                            Widget.Show();
+                        }
+                        else
+                        {
+                            MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
+                            MainWeatherForm.Show();
+                        }
                     }
-                    else
-                    {
-                        MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
-                        MainWeatherForm.Show();
-                    }
-                }          
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid city name. Try again!!!");
+            }
+            
         }      
     }
 }
