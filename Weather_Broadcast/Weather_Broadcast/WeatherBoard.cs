@@ -63,6 +63,16 @@ namespace Weather_Broadcast
 
         private void WeatherBoard_Load(object sender, EventArgs e)
         {
+            AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
+
+            foreach (var cityname in Helper.ListOfCityNames)
+            {
+                cityColl.Add(cityname);
+            }
+
+            selectCityTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            selectCityTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            selectCityTextBox.AutoCompleteCustomSource = cityColl;
         }
 
         private void Refresh_Click(object sender, EventArgs e)

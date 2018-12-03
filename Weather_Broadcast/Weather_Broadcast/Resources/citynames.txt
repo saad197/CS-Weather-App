@@ -1,0 +1,99 @@
+Banff
+Brooks
+Calgary
+Edmonton
+Fort McMurray
+Grande Prairie
+Jasper
+Lake Louise
+Lethbridge
+Medicine Hat
+Red Deer
+Saint Albert
+Barkerville
+Burnaby
+Campbell River
+Chilliwack
+Courtenay
+Cranbrook
+Dawson Creek
+Delta
+Esquimalt
+Fort Saint James
+Fort Saint John
+Hope
+Kamloops
+Kelowna
+Kimberley
+Kitimat
+Langley
+Nanaimo
+Nelson
+New Westminster
+North Vancouver
+Oak Bay
+Penticton
+Powell River
+Prince George
+Prince Rupert
+Quesnel
+Vancouver
+Victoria
+West Vancouver
+Brandon
+Churchill
+Dauphin
+Flin Flon
+Kildonan
+Winnipeg
+York Factory
+Bathurst
+Caraquet
+Dalhousie
+Miramichi
+Moncton
+Saint John
+Argentia
+Bonavista
+Corner Brooks
+Gander
+FortSmith
+Halifax
+Liverpool
+Pictou
+Sydney
+Belleville
+Chatham
+Cornwall
+Guelph
+Kenora
+Kingston
+London
+Ottawa
+Perth
+Windsor
+Hull
+Asbestos
+Laval
+Quebec
+Saskatoon
+Regina
+Dawson
+Whitehorse
+California
+New York
+Chicago
+Los Angeles
+San Francisco
+Washington
+Seattle
+Boston
+Detroit
+Alaska
+Paris
+Rome
+Hanoi
+Dallas
+Las Vegas
+Berlin
+Manchester

@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace Weather_Broadcast
 {
     public static class Helper
-    {      
+    {
+
+        public static string[] ListOfCityNames = new string[] {"Airdrie", "Brooks", "Calgary", "Camrose", "Banff", "Edmonton", "Jasper",};
+
         public static string ConvertFahrenheitToCelsius(double fahrenheitTemp)
         {
             return ((5 / 9) * (fahrenheitTemp - 32)).ToString();
