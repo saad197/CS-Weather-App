@@ -65,5 +65,11 @@ namespace Weather_Broadcast
             Reload.DisplayCurrentWeather();
             MessageBox.Show("Widget refreshed");
         }
+
+        private void Widget_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1)
+                Application.Exit();
+        }
     }
 }

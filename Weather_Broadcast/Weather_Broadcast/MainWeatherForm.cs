@@ -83,5 +83,18 @@ namespace Weather_Broadcast
         {
 
         }
+
+        private void newCity_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            WeatherBoard WB = new WeatherBoard();
+            WB.Show();
+        }
+
+        private void MainWeatherForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1)
+                Application.Exit();
+        }
     }
 }

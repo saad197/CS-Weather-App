@@ -56,7 +56,7 @@ namespace Weather_Broadcast
                         {
                             MainWeatherForm = new MainWeatherForm(DataResponseFromAPI);
                             MainWeatherForm.Show();
-                            WeatherBoardForm.Hide();
+                            WeatherBoardForm.Close();
                         }
                     }
                 }

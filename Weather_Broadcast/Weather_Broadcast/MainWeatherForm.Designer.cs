@@ -36,13 +36,13 @@
             this.Refresh = new System.Windows.Forms.Button();
             this.weatherForecastPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newCity = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateLabel = new System.Windows.Forms.Label();
             this.dailyDetailsControl1 = new Weather_Broadcast.DailyDetailsControl();
-            this.newCity = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,6 +138,21 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // newCity
+            // 
+            this.newCity.BackColor = System.Drawing.Color.DarkSalmon;
+            this.newCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCity.ForeColor = System.Drawing.Color.White;
+            this.newCity.Location = new System.Drawing.Point(898, 0);
+            this.newCity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.newCity.Name = "newCity";
+            this.newCity.Size = new System.Drawing.Size(146, 37);
+            this.newCity.TabIndex = 28;
+            this.newCity.Text = "New City";
+            this.newCity.UseVisualStyleBackColor = false;
+            this.newCity.Click += new System.EventHandler(this.newCity_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -224,20 +239,6 @@
             this.dailyDetailsControl1.UVValue = "0";
             this.dailyDetailsControl1.WindValue = resources.GetString("dailyDetailsControl1.WindValue");
             // 
-            // newCity
-            // 
-            this.newCity.BackColor = System.Drawing.Color.DarkSalmon;
-            this.newCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCity.ForeColor = System.Drawing.Color.White;
-            this.newCity.Location = new System.Drawing.Point(898, 0);
-            this.newCity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.newCity.Name = "newCity";
-            this.newCity.Size = new System.Drawing.Size(146, 37);
-            this.newCity.TabIndex = 28;
-            this.newCity.Text = "New City";
-            this.newCity.UseVisualStyleBackColor = false;
-            // 
             // MainWeatherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +255,7 @@
             this.MaximizeBox = false;
             this.Name = "MainWeatherForm";
             this.Text = "Weather";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWeatherForm_FormClosing);
             this.Load += new System.EventHandler(this.MainWeatherForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
             this.panel1.ResumeLayout(false);

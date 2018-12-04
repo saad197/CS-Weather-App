@@ -16,7 +16,9 @@ namespace Weather_Broadcast
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WeatherBoard());
+            WeatherBoard WB = new WeatherBoard();
+            WB.Show();
+            Application.Run();
         }
     }
 }
