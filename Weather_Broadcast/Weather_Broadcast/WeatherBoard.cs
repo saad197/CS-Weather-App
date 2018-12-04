@@ -125,5 +125,13 @@ namespace Weather_Broadcast
                 btnConfirm.PerformClick();
             }
         }
+
+        private void WeatherBoard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

@@ -134,7 +134,7 @@
             this.panel1.Controls.Add(this.Refresh);
             this.panel1.Controls.Add(this.logo);
             this.panel1.Location = new System.Drawing.Point(-8, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1638, 72);
             this.panel1.TabIndex = 8;
@@ -224,6 +224,7 @@
             this.MaximizeBox = false;
             this.Name = "WeatherBoard";
             this.Text = "Weather Broadcast";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WeatherBoard_FormClosing);
             this.Load += new System.EventHandler(this.WeatherBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
