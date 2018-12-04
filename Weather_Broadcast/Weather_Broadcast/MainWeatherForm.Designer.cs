@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWeatherForm));
-            this.pbMainCurrentIcon = new System.Windows.Forms.PictureBox();
             this.labelMainCurrentTemp = new System.Windows.Forms.Label();
             this.labelMainCurrentDescription = new System.Windows.Forms.Label();
             this.labelMainCity = new System.Windows.Forms.Label();
@@ -38,27 +37,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.newCity = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateLabel = new System.Windows.Forms.Label();
             this.dailyDetailsControl1 = new Weather_Broadcast.DailyDetailsControl();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pbMainCurrentIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbMainCurrentIcon
-            // 
-            this.pbMainCurrentIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pbMainCurrentIcon.Location = new System.Drawing.Point(437, 73);
-            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbMainCurrentIcon.Name = "pbMainCurrentIcon";
-            this.pbMainCurrentIcon.Size = new System.Drawing.Size(152, 141);
-            this.pbMainCurrentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMainCurrentIcon.TabIndex = 0;
-            this.pbMainCurrentIcon.TabStop = false;
             // 
             // labelMainCurrentTemp
             // 
@@ -126,6 +116,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.newCity);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -144,7 +135,7 @@
             this.newCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newCity.ForeColor = System.Drawing.Color.White;
-            this.newCity.Location = new System.Drawing.Point(898, 0);
+            this.newCity.Location = new System.Drawing.Point(847, 0);
             this.newCity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.newCity.Name = "newCity";
             this.newCity.Size = new System.Drawing.Size(146, 37);
@@ -159,7 +150,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1049, 0);
+            this.button3.Location = new System.Drawing.Point(998, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 37);
@@ -167,18 +158,6 @@
             this.button3.Text = "Create Widget";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // cityLabel
             // 
@@ -239,6 +218,44 @@
             this.dailyDetailsControl1.UVValue = "0";
             this.dailyDetailsControl1.WindValue = resources.GetString("dailyDetailsControl1.WindValue");
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1149, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 37);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pbMainCurrentIcon
+            // 
+            this.pbMainCurrentIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pbMainCurrentIcon.Location = new System.Drawing.Point(437, 73);
+            this.pbMainCurrentIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbMainCurrentIcon.Name = "pbMainCurrentIcon";
+            this.pbMainCurrentIcon.Size = new System.Drawing.Size(152, 141);
+            this.pbMainCurrentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMainCurrentIcon.TabIndex = 0;
+            this.pbMainCurrentIcon.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainWeatherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,18 +268,20 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.Name = "MainWeatherForm";
-            this.Text = "Weather";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Weather Broadcast";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWeatherForm_FormClosing);
             this.Load += new System.EventHandler(this.MainWeatherForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +305,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button newCity;
+        private System.Windows.Forms.Button button1;
     }
 }

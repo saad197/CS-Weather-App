@@ -96,5 +96,12 @@ namespace Weather_Broadcast
             if (Application.OpenForms.Count == 1)
                 Application.Exit();
         }
+
+        //about form
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="API.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Constant.cs" />
@@ -93,6 +99,9 @@
     <Compile Include="WidgetOption.Designer.cs">
       <DependentUpon>WidgetOption.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DailyDetailsControl.resx">
       <DependentUpon>DailyDetailsControl.cs</DependentUpon>
     </EmbeddedResource>

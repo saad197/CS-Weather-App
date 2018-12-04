@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Widget));
             this.DateLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.WeatherDescriptionLabel = new System.Windows.Forms.Label();
             this.TempDailyBoxLabel = new System.Windows.Forms.Label();
             this.WeekDayLabel = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.WeatherIconPictureBox = new System.Windows.Forms.PictureBox();
             this.date = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.WeatherIconPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIconPictureBox)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DateLabel
@@ -72,18 +72,6 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // cityLabel
             // 
@@ -159,28 +147,6 @@
             this.WeekDayLabel.TabIndex = 0;
             this.WeekDayLabel.Text = "SUNDAY";
             // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(33, 240);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(25, 19);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
-            // 
-            // WeatherIconPictureBox
-            // 
-            this.WeatherIconPictureBox.Location = new System.Drawing.Point(65, 88);
-            this.WeatherIconPictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.WeatherIconPictureBox.Name = "WeatherIconPictureBox";
-            this.WeatherIconPictureBox.Size = new System.Drawing.Size(64, 47);
-            this.WeatherIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.WeatherIconPictureBox.TabIndex = 8;
-            this.WeatherIconPictureBox.TabStop = false;
-            // 
             // date
             // 
             this.date.AutoSize = true;
@@ -215,6 +181,40 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(101, 38);
             this.flowLayoutPanel1.TabIndex = 30;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(33, 240);
+            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(25, 19);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            // 
+            // WeatherIconPictureBox
+            // 
+            this.WeatherIconPictureBox.Location = new System.Drawing.Point(65, 88);
+            this.WeatherIconPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.WeatherIconPictureBox.Name = "WeatherIconPictureBox";
+            this.WeatherIconPictureBox.Size = new System.Drawing.Size(64, 47);
+            this.WeatherIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WeatherIconPictureBox.TabIndex = 8;
+            this.WeatherIconPictureBox.TabStop = false;
+            // 
             // Widget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,17 +233,19 @@
             this.Controls.Add(this.WeatherIconPictureBox);
             this.Controls.Add(this.DateLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Widget";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Widget";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Widget_FormClosing);
             this.Load += new System.EventHandler(this.Widget_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIconPictureBox)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
