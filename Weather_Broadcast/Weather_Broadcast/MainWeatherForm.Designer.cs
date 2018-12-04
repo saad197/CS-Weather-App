@@ -35,13 +35,14 @@
             this.labelMainCity = new System.Windows.Forms.Label();
             this.Refresh = new System.Windows.Forms.Button();
             this.weatherForecastPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.dailyDetailsControl1 = new Weather_Broadcast.DailyDetailsControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateLabel = new System.Windows.Forms.Label();
+            this.dailyDetailsControl1 = new Weather_Broadcast.DailyDetailsControl();
+            this.newCity = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMainCurrentIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,31 +118,15 @@
             // 
             this.weatherForecastPanel.BackColor = System.Drawing.Color.Transparent;
             this.weatherForecastPanel.Location = new System.Drawing.Point(106, 260);
-            this.weatherForecastPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weatherForecastPanel.Margin = new System.Windows.Forms.Padding(2);
             this.weatherForecastPanel.Name = "weatherForecastPanel";
             this.weatherForecastPanel.Size = new System.Drawing.Size(1097, 263);
             this.weatherForecastPanel.TabIndex = 22;
             // 
-            // dailyDetailsControl1
-            // 
-            this.dailyDetailsControl1.BackColor = System.Drawing.Color.Transparent;
-            this.dailyDetailsControl1.HumidityValue = "0%";
-            this.dailyDetailsControl1.Location = new System.Drawing.Point(53, 529);
-            this.dailyDetailsControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dailyDetailsControl1.MoonRiseTimeValue = "Time";
-            this.dailyDetailsControl1.MoonSetTimeValue = "Time";
-            this.dailyDetailsControl1.Name = "dailyDetailsControl1";
-            this.dailyDetailsControl1.PrecipitationValue = "0%";
-            this.dailyDetailsControl1.Size = new System.Drawing.Size(1099, 284);
-            this.dailyDetailsControl1.SunRiseTimeValue = "Time";
-            this.dailyDetailsControl1.SunSetTimeValue = "Time";
-            this.dailyDetailsControl1.TabIndex = 23;
-            this.dailyDetailsControl1.UVValue = "0";
-            this.dailyDetailsControl1.WindValue = resources.GetString("dailyDetailsControl1.WindValue");
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.newCity);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cityLabel);
@@ -173,7 +158,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,6 +207,37 @@
             this.dateLabel.TabIndex = 24;
             this.dateLabel.Text = "Temp";
             // 
+            // dailyDetailsControl1
+            // 
+            this.dailyDetailsControl1.BackColor = System.Drawing.Color.Transparent;
+            this.dailyDetailsControl1.HumidityValue = "0%";
+            this.dailyDetailsControl1.Location = new System.Drawing.Point(53, 529);
+            this.dailyDetailsControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.dailyDetailsControl1.MoonRiseTimeValue = "Time";
+            this.dailyDetailsControl1.MoonSetTimeValue = "Time";
+            this.dailyDetailsControl1.Name = "dailyDetailsControl1";
+            this.dailyDetailsControl1.PrecipitationValue = "0%";
+            this.dailyDetailsControl1.Size = new System.Drawing.Size(1099, 284);
+            this.dailyDetailsControl1.SunRiseTimeValue = "Time";
+            this.dailyDetailsControl1.SunSetTimeValue = "Time";
+            this.dailyDetailsControl1.TabIndex = 23;
+            this.dailyDetailsControl1.UVValue = "0";
+            this.dailyDetailsControl1.WindValue = resources.GetString("dailyDetailsControl1.WindValue");
+            // 
+            // newCity
+            // 
+            this.newCity.BackColor = System.Drawing.Color.DarkSalmon;
+            this.newCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCity.ForeColor = System.Drawing.Color.White;
+            this.newCity.Location = new System.Drawing.Point(898, 0);
+            this.newCity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.newCity.Name = "newCity";
+            this.newCity.Size = new System.Drawing.Size(146, 37);
+            this.newCity.TabIndex = 28;
+            this.newCity.Text = "New City";
+            this.newCity.UseVisualStyleBackColor = false;
+            // 
             // MainWeatherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,5 +283,6 @@
         private System.Windows.Forms.Label cityLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button newCity;
     }
 }
