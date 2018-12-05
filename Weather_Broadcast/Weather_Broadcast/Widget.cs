@@ -23,7 +23,7 @@ namespace Weather_Broadcast
         {
             InitializeComponent();
 
-            WeatherWidget widget = new WeatherWidget(WeatherResponse, cityLabel, date, TempDailyBoxLabel, WeatherDescriptionLabel, WeatherIconPictureBox);
+            WeatherWidget widget = new WeatherWidget(WeatherResponse, cityLabel, date, TempDailyBoxLabel, WeatherDescriptionLabel, WeatherIconPictureBox, WeekDayLabel);
             widget.DisplayCurrentWeather();
             Reload = widget;
         }

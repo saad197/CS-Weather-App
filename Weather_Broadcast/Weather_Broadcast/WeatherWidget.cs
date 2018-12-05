@@ -11,10 +11,11 @@ namespace Weather_Broadcast
         public Label LabelCurrentTemperature { get; private set; }
         public Label LabelDescription { get; private set; }
         public PictureBox PictureBoxIcon { get; private set; }
+        public Label WeekDayLabel { get; private set; }
         public dynamic WeatherResponseFromAPI { get; private set; }
 
 
-        public WeatherWidget(dynamic dataResponse, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon)
+        public WeatherWidget(dynamic dataResponse, Label labelCityName, Label labelDate, Label labelCurrentTemp, Label labelDescription, PictureBox weatherIcon, Label weekdayLabel)
         {
             // init weather data
             WeatherResponseFromAPI = dataResponse;
@@ -25,6 +26,7 @@ namespace Weather_Broadcast
             LabelCurrentTemperature = labelCurrentTemp;
             LabelDescription = labelDescription;
             PictureBoxIcon = weatherIcon;
+            WeekDayLabel = weekdayLabel;
         }
 
 
@@ -40,6 +42,7 @@ namespace Weather_Broadcast
             DisplayCurrentDate();
             DisplayDescription();
             DisplayIcon();
+            DisplayWeekDay();
         }
 
         private void DisplayWeather()
@@ -66,6 +69,19 @@ namespace Weather_Broadcast
         {
             var UrlPath = WeatherResponseFromAPI.current.condition.icon;
             PictureBoxIcon.Load(@"http:" + UrlPath.ToString());
+        }
+
+        private void DisplayWeekDay()
+        {
+            var currentDate = (DateTime)WeatherResponseFromAPI.forecast.forecastday[0].date;
+            var dayOfWeek = GetWeekDayFromGivenDate(currentDate);
+            WeekDayLabel.Text = dayOfWeek;
+
+        }
+
+        private string GetWeekDayFromGivenDate(DateTime givenDate)
+        {
+            return givenDate.DayOfWeek.ToString();
         }
     }
 
