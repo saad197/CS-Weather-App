@@ -293,9 +293,6 @@
         private System.Windows.Forms.Label labelMainCurrentDescription;
         private System.Windows.Forms.Label labelMainCity;
         private System.Windows.Forms.Button Refresh;
-        private DailyWeatherControl dailyWeatherControl1;
-        private DailyWeatherControl dailyWeatherControl2;
-        private DailyWeatherControl dailyWeatherControl3;
         private System.Windows.Forms.FlowLayoutPanel weatherForecastPanel;
         private DailyDetailsControl dailyDetailsControl1;
         private System.Windows.Forms.Panel panel1;
