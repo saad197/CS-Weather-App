@@ -1,29 +1,9 @@
-# README #
+# SODV2101 PROEJCT WEATHER #
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+# IF DESIGNER FAILS TO LOAD #
 
-### How do I get set up? ###
+If the designer fails to load, which it does for some reason, dispite the program compiling and executing just fine, please open MainWeatherForm.Designer.cs in Visual Studio and simply enter a new line, and then save it and run the program. The designer than should load.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Thanks. 
