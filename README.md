@@ -1,7 +1,7 @@
 # C# Weather App #
 
 ### What is this repository for? ###
-Weather Application written in C# with Windows Forms. 
+Weather Application written in C# with Windows Forms, using https://openweathermap.org/api for data. 
 
 
 <img align="center" src="https://i.gyazo.com/5fe634936ac2d26499d518780979de36.png" alt="Weather">
